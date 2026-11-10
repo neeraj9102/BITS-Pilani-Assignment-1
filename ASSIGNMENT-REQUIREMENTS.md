@@ -75,8 +75,8 @@ The student template asks for name, student ID, institutional email, public GitH
 1. Read the PDF and student template; translate their requirements into the per-part Spec Kit plans and this checklist. **Complete.**
 2. Approve each specification/plan and establish acceptance criteria before production implementation. **Complete for both parts.**
 3. Implement Part 1A and Part 1B, preserve initial generations, and build independent deterministic and non-deterministic harnesses. **Implemented.**
-4. Capture actual test/evaluation failures and repairs, rerun unchanged controls, and preserve all outcomes. **In progress for Part 1B live model quality; Part 1A and Part 1B offline gates pass.**
-5. Refresh final-generation snapshots/manifests only after the final validation run. **Pending final Part 1B live run.**
-6. Have the student inspect every result, complete both harness-log narratives and final human decisions, write the five reflection responses, record the demo, and publish the public GitHub repository/video links. **Student actions pending.**
+4. Capture actual test/evaluation failures and repairs, rerun unchanged controls, and preserve all outcomes. **Complete.** Part 1A, Part 1B offline, and the final 18-case Part 1B Ollama evaluation pass their captured gates. Earlier model failures, a resource-interrupted 7B attempt, and the OpenAI run that was incomplete without API configuration remain preserved.
+5. Refresh final-generation snapshots/manifests only after the final validation run. **Complete.** Initial and final manifests were verified for both parts.
+6. Have the student inspect every result, complete both harness-log narratives and final human decisions, write the five reflection responses, record the demo, complete the student template, and submit the reflection report. **Student actions pending.** The public repository is already published at https://github.com/neeraj9102/BITS-Pilani-Assignment-1; the video and reflection are not.
 
 The status of the latest offline gates and each actual live model evaluation is maintained in [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md). A failed live evaluation remains a failed evaluation; it is not reclassified as a pass because offline tests pass.

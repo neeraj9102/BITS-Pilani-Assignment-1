@@ -1,4 +1,3 @@
-Warning: fsmod was declared with const; use let for reassignable variables.
 # BITS Pilani Assignment 1
 
 This repository contains both compulsory applications for the assignment:

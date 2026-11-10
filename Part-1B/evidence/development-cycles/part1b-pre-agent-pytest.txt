@@ -1,0 +1,27 @@
+
+=================================== ERRORS ====================================
+___________ ERROR collecting tests/contract/test_output_contract.py ___________
+ImportError while importing test module 'C:\Users\hp\Documents\Codex\2026-11-09\i-have-uploaded-two-important-files\outputs\Assignment-1\Part-1B\tests\contract\test_output_contract.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\hp\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\contract\test_output_contract.py:7: in <module>
+    from reminder_agent.models import OutputValidationError, parse_request_envelope
+E   ImportError: cannot import name 'parse_request_envelope' from 'reminder_agent.models' (C:\Users\hp\Documents\Codex\2026-11-09\i-have-uploaded-two-important-files\outputs\Assignment-1\Part-1B\src\reminder_agent\models.py)
+______________ ERROR collecting tests/unit/test_create_agent.py _______________
+ImportError while importing test module 'C:\Users\hp\Documents\Codex\2026-11-09\i-have-uploaded-two-important-files\outputs\Assignment-1\Part-1B\tests\unit\test_create_agent.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\hp\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\unit\test_create_agent.py:3: in <module>
+    from reminder_agent.agent import ReminderAgent
+E   ModuleNotFoundError: No module named 'reminder_agent.agent'
+=========================== short test summary info ===========================
+ERROR tests/contract/test_output_contract.py
+ERROR tests/unit/test_create_agent.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!
+2 errors in 0.97s

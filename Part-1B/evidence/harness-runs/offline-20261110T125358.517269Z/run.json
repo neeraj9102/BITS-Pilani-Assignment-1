@@ -1,0 +1,58 @@
+{
+  "run_id": "offline-20261110T125358.517269Z",
+  "run_type": "offline",
+  "started_at_utc": "2026-11-10T12:53:58.517269Z",
+  "completed_at_utc": "2026-11-10T12:54:02.270816Z",
+  "gates": [
+    {
+      "name": "compileall",
+      "command": [
+        "C:\\Users\\hp\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "tests",
+        ".harness"
+      ],
+      "started_at_utc": "2026-11-10T12:53:58.517269Z",
+      "completed_at_utc": "2026-11-10T12:53:58.760776Z",
+      "exit_code": 0,
+      "status": "passed",
+      "stdout_file": "compileall.stdout.txt",
+      "stderr_file": "compileall.stderr.txt"
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "C:\\Users\\hp\\Documents\\Codex\\2026-11-09\\i-have-uploaded-two-important-files\\work\\assignment-deps-b\\bin\\ruff.EXE",
+        "check",
+        "src",
+        "tests",
+        ".harness"
+      ],
+      "started_at_utc": "2026-11-10T12:53:58.760776Z",
+      "completed_at_utc": "2026-11-10T12:53:58.839407Z",
+      "exit_code": 0,
+      "status": "passed",
+      "stdout_file": "ruff.stdout.txt",
+      "stderr_file": "ruff.stderr.txt"
+    },
+    {
+      "name": "pytest",
+      "command": [
+        "C:\\Users\\hp\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "started_at_utc": "2026-11-10T12:53:58.839407Z",
+      "completed_at_utc": "2026-11-10T12:54:02.270816Z",
+      "exit_code": 0,
+      "status": "passed",
+      "stdout_file": "pytest.stdout.txt",
+      "stderr_file": "pytest.stderr.txt"
+    }
+  ],
+  "overall_status": "passed"
+}

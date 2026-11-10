@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.txt -text
+**/evidence/initial-generation/** -text
+**/evidence/final-generation/** -text

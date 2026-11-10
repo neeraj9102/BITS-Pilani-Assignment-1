@@ -1,0 +1,23 @@
+{
+  "created_at_utc": "2026-11-10T15:25:10.1093262Z",
+  "prompts": [
+    {
+      "path": "evidence\\development-cycles\\prompt-expanded-before-repair-20261110.md",
+      "note": "Prompt used for the 0.595833 failed live run; verbose decision rules correlated with regressions in several complete requests.",
+      "bytes": 4263,
+      "sha256": "6cbd57b47f358974fdd099c71477bef9110b59963cba27eec83730948462ee0c"
+    },
+    {
+      "path": "evidence\\development-cycles\\prompt-concise-before-policy-repair-20261110.md",
+      "note": "Concise prompt used for the 0.577778 failed live run before local request guardrails.",
+      "bytes": 3121,
+      "sha256": "b9330978a12fe3b639366b7ab05197262786510103e92560ecaa647323d793f1"
+    },
+    {
+      "path": "prompts\\system.md",
+      "note": "Prompt used for the final live PASS.",
+      "bytes": 3277,
+      "sha256": "a9dd72f10c414c7e2da8f2e52099750da685eeb392526e6861a8b833648e17b3"
+    }
+  ]
+}

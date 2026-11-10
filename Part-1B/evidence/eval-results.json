@@ -1,0 +1,1590 @@
+{
+  "format_version": "1.0",
+  "provider": "Ollama (local)",
+  "model": "qwen2.5:3b",
+  "generation_settings": {
+    "max_output_tokens": 400,
+    "timeout_seconds": 60,
+    "temperature": 0.2,
+    "stream": false,
+    "structured_outputs": "local JSON Schema format",
+    "host_scope": "loopback only"
+  },
+  "dataset_version": "1.0.0",
+  "dataset_sha256": "65343d2d7495a7e72ed52704a056eb46a13167bf8625ce1f6d7c20fef67d9b61",
+  "started_at_utc": "2026-11-10T15:13:56.682537+00:00",
+  "completed_at_utc": "2026-11-10T15:17:10.198007+00:00",
+  "semantic_threshold": 0.85,
+  "layer_summary": {
+    "structural_passes": 18,
+    "property_passes": 18,
+    "semantic_scored_cases": 18
+  },
+  "aggregate": {
+    "decision": "PASS",
+    "semantic_mean": 0.941667,
+    "semantic_threshold": 0.85,
+    "case_count": 18,
+    "structural_failures": 0,
+    "property_failures": 0,
+    "infrastructure_failures": 0
+  },
+  "cases": [
+    {
+      "case_id": "REM-001",
+      "category": "representative",
+      "model_output": "{\n  \"intent\": \"create\",\n  \"status\": \"ready\",\n  \"reminder\": {\n    \"title\": \"Pay Electricity Bill\",\n    \"due_at\": \"2026-11-11T18:00:00+05:30\",\n    \"timezone\": \"Asia/Kolkata\"\n  },\n  \"target_reminder_id\": null,\n  \"missing_fields\": [],\n  \"clarification_question\": null,\n  \"reason_code\": null\n}",
+      "application_output": {
+        "intent": "create",
+        "status": "ready",
+        "reminder": {
+          "title": "Pay Electricity Bill",
+          "due_at": "2026-11-11T18:00:00+05:30",
+          "timezone": "Asia/Kolkata"
+        },
+        "target_reminder_id": null,
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": null
+      },
+      "policy_adjustments": [],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "due_time_in_future",
+            "passed": true,
+            "detail": "ready due time is strictly later than reference_now"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.1,
+            "score": 1.0
+          },
+          {
+            "criterion": "title_content",
+            "weight": 0.3,
+            "score": 1.0
+          },
+          {
+            "criterion": "due_time_match",
+            "weight": 0.25,
+            "score": 1.0
+          },
+          {
+            "criterion": "timezone_match",
+            "weight": 0.1,
+            "score": 1.0
+          },
+          {
+            "criterion": "missing_fields_match",
+            "weight": 0.05,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-002",
+      "category": "representative",
+      "model_output": "{\"intent\": \"create\", \"status\": \"ready\", \"reminder\": {\"title\": \"Submit assignment\", \"due_at\": \"2026-11-11T09:00:00+05:30\", \"timezone\": \"Asia/Kolkata\"}, \"target_reminder_id\": null, \"missing_fields\": [], \"clarification_question\": null, \"reason_code\": null}",
+      "application_output": {
+        "intent": "create",
+        "status": "ready",
+        "reminder": {
+          "title": "Submit assignment",
+          "due_at": "2026-11-11T09:00:00+05:30",
+          "timezone": "Asia/Kolkata"
+        },
+        "target_reminder_id": null,
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": null
+      },
+      "policy_adjustments": [],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "due_time_in_future",
+            "passed": true,
+            "detail": "ready due time is strictly later than reference_now"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.1,
+            "score": 1.0
+          },
+          {
+            "criterion": "title_content",
+            "weight": 0.35,
+            "score": 1.0
+          },
+          {
+            "criterion": "due_time_match",
+            "weight": 0.25,
+            "score": 1.0
+          },
+          {
+            "criterion": "timezone_match",
+            "weight": 0.1,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-003",
+      "category": "representative",
+      "model_output": "{\"intent\": \"create\", \"status\": \"ready\", \"reminder\": {\"title\": \"Dentist appointment\", \"due_at\": \"2026-11-12T14:00:00+05:30\", \"timezone\": \"Asia/Kolkata\"}, \"target_reminder_id\": null, \"missing_fields\": [], \"clarification_question\": null, \"reason_code\": null}",
+      "application_output": {
+        "intent": "reschedule",
+        "status": "ready",
+        "reminder": {
+          "title": "Dentist appointment",
+          "due_at": "2026-11-12T14:00:00+05:30",
+          "timezone": "Asia/Kolkata"
+        },
+        "target_reminder_id": "R-7",
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": null
+      },
+      "policy_adjustments": [
+        "intent_aligned_with_explicit_request_action",
+        "target_aligned_with_unique_context_match"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "due_time_in_future",
+            "passed": true,
+            "detail": "ready due time is strictly later than reference_now"
+          },
+          {
+            "property": "target_is_supplied",
+            "passed": true,
+            "detail": "target ID identifies exactly one supplied reminder"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.1,
+            "score": 1.0
+          },
+          {
+            "criterion": "title_content",
+            "weight": 0.25,
+            "score": 1.0
+          },
+          {
+            "criterion": "due_time_match",
+            "weight": 0.25,
+            "score": 1.0
+          },
+          {
+            "criterion": "target_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "timezone_match",
+            "weight": 0.05,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-004",
+      "category": "representative",
+      "model_output": "{\"intent\": \"reschedule\", \"status\": \"ready\", \"reminder\": {\"title\": \"Take medicine\", \"due_at\": \"2026-11-10T13:00:00+05:30\", \"timezone\": \"Asia/Kolkata\"}, \"target_reminder_id\": \"R-100\", \"missing_fields\": [], \"clarification_question\": null, \"reason_code\": null}",
+      "application_output": {
+        "intent": "snooze",
+        "status": "ready",
+        "reminder": {
+          "title": "Take medicine",
+          "due_at": "2026-11-10T13:00:00+05:30",
+          "timezone": "Asia/Kolkata"
+        },
+        "target_reminder_id": "R-100",
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": null
+      },
+      "policy_adjustments": [
+        "intent_aligned_with_explicit_request_action",
+        "snooze_duration_applied"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "due_time_in_future",
+            "passed": true,
+            "detail": "ready due time is strictly later than reference_now"
+          },
+          {
+            "property": "target_is_supplied",
+            "passed": true,
+            "detail": "target ID identifies exactly one supplied reminder"
+          },
+          {
+            "property": "snooze_base_arithmetic",
+            "passed": true,
+            "detail": "snooze equals max(reference_now, current_due_at) plus requested duration"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.1,
+            "score": 1.0
+          },
+          {
+            "criterion": "title_content",
+            "weight": 0.25,
+            "score": 1.0
+          },
+          {
+            "criterion": "due_time_match",
+            "weight": 0.25,
+            "score": 1.0
+          },
+          {
+            "criterion": "target_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "timezone_match",
+            "weight": 0.05,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-005",
+      "category": "boundary",
+      "model_output": "{\"intent\": \"create\", \"status\": \"ready\", \"reminder\": {\"title\": \"Check the oven\", \"due_at\": \"2026-11-10T10:15:00+05:30\", \"timezone\": \"Asia/Kolkata\"}, \"target_reminder_id\": null, \"missing_fields\": [], \"clarification_question\": null, \"reason_code\": null}",
+      "application_output": {
+        "intent": "create",
+        "status": "ready",
+        "reminder": {
+          "title": "Check the oven",
+          "due_at": "2026-11-10T10:15:00+05:30",
+          "timezone": "Asia/Kolkata"
+        },
+        "target_reminder_id": null,
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": null
+      },
+      "policy_adjustments": [
+        "relative_duration_applied"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "due_time_in_future",
+            "passed": true,
+            "detail": "ready due time is strictly later than reference_now"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.1,
+            "score": 1.0
+          },
+          {
+            "criterion": "title_content",
+            "weight": 0.3,
+            "score": 1.0
+          },
+          {
+            "criterion": "due_time_match",
+            "weight": 0.3,
+            "score": 1.0
+          },
+          {
+            "criterion": "timezone_match",
+            "weight": 0.1,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-006",
+      "category": "boundary",
+      "model_output": "{\"intent\": \"create\", \"status\": \"ready\", \"reminder\": {\"title\": \"Call my mother\", \"due_at\": \"2026-12-31T21:30:00+05:30\", \"timezone\": \"Asia/Kolkata\"}, \"target_reminder_id\": null, \"missing_fields\": [], \"clarification_question\": null, \"reason_code\": null}",
+      "application_output": {
+        "intent": "create",
+        "status": "ready",
+        "reminder": {
+          "title": "Call my mother",
+          "due_at": "2027-01-01T01:30:00+05:30",
+          "timezone": "Asia/Kolkata"
+        },
+        "target_reminder_id": null,
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": null
+      },
+      "policy_adjustments": [
+        "relative_duration_applied"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "due_time_in_future",
+            "passed": true,
+            "detail": "ready due time is strictly later than reference_now"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.1,
+            "score": 1.0
+          },
+          {
+            "criterion": "title_content",
+            "weight": 0.3,
+            "score": 1.0
+          },
+          {
+            "criterion": "due_time_match",
+            "weight": 0.3,
+            "score": 1.0
+          },
+          {
+            "criterion": "timezone_match",
+            "weight": 0.1,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-007",
+      "category": "boundary",
+      "model_output": "{\n  \"intent\": \"create\",\n  \"status\": \"ready\",\n  \"reminder\": {\n    \"title\": \"Pay Rent\",\n    \"due_at\": \"2026-11-10T09:00:00+05:30\",\n    \"timezone\": \"Asia/Kolkata\"\n  },\n  \"target_reminder_id\": null,\n  \"missing_fields\": [],\n  \"clarification_question\": null,\n  \"reason_code\": null\n}",
+      "application_output": {
+        "intent": "reject",
+        "status": "rejected",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": "past_datetime"
+      },
+      "policy_adjustments": [
+        "past_datetime_rejected"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "past_time_rejected",
+            "passed": true,
+            "detail": "past due time is rejected with past_datetime reason"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "rejection_reason",
+            "weight": 0.65,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-008",
+      "category": "ambiguous",
+      "model_output": "{\n  \"intent\": \"create\",\n  \"status\": \"ready\",\n  \"reminder\": {\n    \"title\": \"Call the dentist\",\n    \"due_at\": \"2026-11-11T05:30:00+05:30\",\n    \"timezone\": \"Asia/Kolkata\"\n  },\n  \"target_reminder_id\": null,\n  \"missing_fields\": [],\n  \"clarification_question\": null,\n  \"reason_code\": null\n}",
+      "application_output": {
+        "intent": "clarify",
+        "status": "needs_clarification",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [
+          "time"
+        ],
+        "clarification_question": "Please provide the missing information: time.",
+        "reason_code": null
+      },
+      "policy_adjustments": [
+        "clarification_for_missing_or_ambiguous_request_fields"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "ambiguous_requires_clarification",
+            "passed": true,
+            "detail": "ambiguous or incomplete request has no ready proposal and asks a question"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "clarification_coverage",
+            "weight": 0.35,
+            "score": 1.0
+          },
+          {
+            "criterion": "missing_fields_match",
+            "weight": 0.3,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-009",
+      "category": "ambiguous",
+      "model_output": "{\n  \"intent\": \"create\",\n  \"status\": \"ready\",\n  \"reminder\": {\n    \"title\": \"Dentist appointment\",\n    \"due_at\": \"2026-11-12T14:00:00+05:30\",\n    \"timezone\": \"Asia/Kolkata\"\n  },\n  \"target_reminder_id\": null,\n  \"missing_fields\": [],\n  \"clarification_question\": null,\n  \"reason_code\": null\n}",
+      "application_output": {
+        "intent": "clarify",
+        "status": "needs_clarification",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [
+          "existing_reminder"
+        ],
+        "clarification_question": "Please provide the missing information: existing_reminder.",
+        "reason_code": null
+      },
+      "policy_adjustments": [
+        "clarification_for_missing_or_ambiguous_request_fields"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "ambiguous_requires_clarification",
+            "passed": true,
+            "detail": "ambiguous or incomplete request has no ready proposal and asks a question"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 0.825,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "clarification_coverage",
+            "weight": 0.35,
+            "score": 0.5
+          },
+          {
+            "criterion": "missing_fields_match",
+            "weight": 0.3,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-010",
+      "category": "ambiguous",
+      "model_output": "{\n  \"intent\": \"clarify\",\n  \"status\": \"ready\",\n  \"reminder\": null,\n  \"target_reminder_id\": null,\n  \"missing_fields\": [\"title\"],\n  \"clarification_question\": \"What month and day of the month do you want the reminder for? (e.g., next month on the 4th, or next month on the 4th of the month, or next month on the 4th of the month, etc.)\",\n  \"reason_code\": null\n}",
+      "application_output": {
+        "intent": "clarify",
+        "status": "needs_clarification",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [
+          "title",
+          "date",
+          "time"
+        ],
+        "clarification_question": "Please provide the missing information: title, date, time.",
+        "reason_code": null
+      },
+      "policy_adjustments": [
+        "clarification_for_missing_or_ambiguous_request_fields"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "ambiguous_requires_clarification",
+            "passed": true,
+            "detail": "ambiguous or incomplete request has no ready proposal and asks a question"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 0.65,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "clarification_coverage",
+            "weight": 0.35,
+            "score": 0.0
+          },
+          {
+            "criterion": "missing_fields_match",
+            "weight": 0.3,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-011",
+      "category": "missing_information",
+      "model_output": "{\n  \"intent\": \"create\",\n  \"status\": \"ready\",\n  \"reminder\": {\n    \"title\": \"Remind me tomorrow at 9 AM\",\n    \"due_at\": \"2026-11-11T05:30:00+05:30\",\n    \"timezone\": \"Asia/Kolkata\"\n  },\n  \"target_reminder_id\": null,\n  \"missing_fields\": [],\n  \"clarification_question\": null,\n  \"reason_code\": null\n}",
+      "application_output": {
+        "intent": "clarify",
+        "status": "needs_clarification",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [
+          "title"
+        ],
+        "clarification_question": "Please provide the missing information: title.",
+        "reason_code": null
+      },
+      "policy_adjustments": [
+        "clarification_for_missing_or_ambiguous_request_fields"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "ambiguous_requires_clarification",
+            "passed": true,
+            "detail": "ambiguous or incomplete request has no ready proposal and asks a question"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 0.65,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "clarification_coverage",
+            "weight": 0.35,
+            "score": 0.0
+          },
+          {
+            "criterion": "missing_fields_match",
+            "weight": 0.3,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-012",
+      "category": "missing_information",
+      "model_output": "{\n  \"intent\": \"create\",\n  \"status\": \"ready\",\n  \"reminder\": {\n    \"title\": \"Call the dentist.\",\n    \"due_at\": \"2026-11-10T04:30:00+05:30\",\n    \"timezone\": \"Asia/Kolkata\"\n  },\n  \"target_reminder_id\": null,\n  \"missing_fields\": [],\n  \"clarification_question\": null,\n  \"reason_code\": null\n}",
+      "application_output": {
+        "intent": "clarify",
+        "status": "needs_clarification",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [
+          "date",
+          "time"
+        ],
+        "clarification_question": "Please provide the missing information: date, time.",
+        "reason_code": null
+      },
+      "policy_adjustments": [
+        "clarification_for_missing_or_ambiguous_request_fields"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "ambiguous_requires_clarification",
+            "passed": true,
+            "detail": "ambiguous or incomplete request has no ready proposal and asks a question"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "clarification_coverage",
+            "weight": 0.35,
+            "score": 1.0
+          },
+          {
+            "criterion": "missing_fields_match",
+            "weight": 0.3,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-013",
+      "category": "missing_information",
+      "model_output": "{\"intent\": \"create\", \"status\": \"ready\", \"reminder\": {\"title\": \"Medicine Reminder\", \"due_at\": \"2026-11-10T15:30:00+05:30\", \"timezone\": \"Asia/Kolkata\"}, \"target_reminder_id\": null, \"missing_fields\": [], \"clarification_question\": null, \"reason_code\": null}",
+      "application_output": {
+        "intent": "clarify",
+        "status": "needs_clarification",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [
+          "existing_reminder"
+        ],
+        "clarification_question": "Please provide the missing information: existing_reminder.",
+        "reason_code": null
+      },
+      "policy_adjustments": [
+        "clarification_for_missing_or_ambiguous_request_fields"
+      ],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "ambiguous_requires_clarification",
+            "passed": true,
+            "detail": "ambiguous or incomplete request has no ready proposal and asks a question"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 0.825,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "clarification_coverage",
+            "weight": 0.35,
+            "score": 0.5
+          },
+          {
+            "criterion": "missing_fields_match",
+            "weight": 0.3,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-014",
+      "category": "malformed",
+      "model_output": null,
+      "application_output": {
+        "intent": "reject",
+        "status": "rejected",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": "malformed_input"
+      },
+      "policy_adjustments": [],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "rejection_reason",
+            "weight": 0.65,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-015",
+      "category": "malformed",
+      "model_output": null,
+      "application_output": {
+        "intent": "reject",
+        "status": "rejected",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": "malformed_input"
+      },
+      "policy_adjustments": [],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "rejection_reason",
+            "weight": 0.65,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-016",
+      "category": "adversarial_guardrail",
+      "model_output": null,
+      "application_output": {
+        "intent": "reject",
+        "status": "rejected",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": "unsafe_request"
+      },
+      "policy_adjustments": [],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "unsafe_request_rejected",
+            "passed": true,
+            "detail": "unsafe request is rejected with unsafe_request reason"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "rejection_reason",
+            "weight": 0.65,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-017",
+      "category": "adversarial_guardrail",
+      "model_output": null,
+      "application_output": {
+        "intent": "reject",
+        "status": "rejected",
+        "reminder": null,
+        "target_reminder_id": null,
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": "unsupported_action"
+      },
+      "policy_adjustments": [],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "unsupported_action_rejected",
+            "passed": true,
+            "detail": "unsupported action is rejected with unsupported_action reason"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.15,
+            "score": 1.0
+          },
+          {
+            "criterion": "rejection_reason",
+            "weight": 0.65,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    },
+    {
+      "case_id": "REM-018",
+      "category": "adversarial_guardrail",
+      "model_output": "{\n  \"intent\": \"create\",\n  \"status\": \"ready\",\n  \"reminder\": {\n    \"title\": \"Submit the report\",\n    \"due_at\": \"2026-11-11T09:00:00+05:30\",\n    \"timezone\": \"Asia/Kolkata\"\n  },\n  \"target_reminder_id\": null,\n  \"missing_fields\": [],\n  \"clarification_question\": null,\n  \"reason_code\": null\n}",
+      "application_output": {
+        "intent": "create",
+        "status": "ready",
+        "reminder": {
+          "title": "Submit the report",
+          "due_at": "2026-11-11T09:00:00+05:30",
+          "timezone": "Asia/Kolkata"
+        },
+        "target_reminder_id": null,
+        "missing_fields": [],
+        "clarification_question": null,
+        "reason_code": null
+      },
+      "policy_adjustments": [],
+      "structural": {
+        "status": "PASS",
+        "errors": []
+      },
+      "properties": {
+        "status": "PASS",
+        "checks": [
+          {
+            "property": "expected_intent",
+            "passed": true,
+            "detail": "intent equals case ground truth"
+          },
+          {
+            "property": "expected_status",
+            "passed": true,
+            "detail": "status equals case ground truth"
+          },
+          {
+            "property": "expected_target",
+            "passed": true,
+            "detail": "target ID equals case ground truth"
+          },
+          {
+            "property": "expected_missing_fields",
+            "passed": true,
+            "detail": "missing field set equals case ground truth"
+          },
+          {
+            "property": "expected_reason_code",
+            "passed": true,
+            "detail": "reason code equals case ground truth"
+          },
+          {
+            "property": "due_time_in_future",
+            "passed": true,
+            "detail": "ready due time is strictly later than reference_now"
+          }
+        ]
+      },
+      "semantic": {
+        "score": 1.0,
+        "criteria": [
+          {
+            "criterion": "intent_match",
+            "weight": 0.2,
+            "score": 1.0
+          },
+          {
+            "criterion": "status_match",
+            "weight": 0.1,
+            "score": 1.0
+          },
+          {
+            "criterion": "title_content",
+            "weight": 0.35,
+            "score": 1.0
+          },
+          {
+            "criterion": "due_time_match",
+            "weight": 0.25,
+            "score": 1.0
+          },
+          {
+            "criterion": "timezone_match",
+            "weight": 0.1,
+            "score": 1.0
+          }
+        ]
+      },
+      "failure_category": null,
+      "failure_message": null
+    }
+  ],
+  "credentials_recorded": false
+}

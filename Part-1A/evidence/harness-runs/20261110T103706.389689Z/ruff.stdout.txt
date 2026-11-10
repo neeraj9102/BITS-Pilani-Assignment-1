@@ -1,0 +1,36 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests\contract\test_crud_cli.py:1:1
+   |
+ 1 | / import io
+ 2 | | import json
+ 3 | | import os
+ 4 | | import subprocess
+ 5 | | import sys
+ 6 | | from contextlib import redirect_stderr, redirect_stdout
+ 7 | | from pathlib import Path
+ 8 | | from types import SimpleNamespace
+ 9 | |
+10 | | from smart_todo.cli import main
+   | |_______________________________^
+help: Organize imports
+   |
+11 |
+   -
+12 | PROJECT_ROOT = Path(__file__).resolve().parents[2]
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> tests\unit\test_harness.py:1:1
+  |
+1 | / import importlib.util
+2 | | from pathlib import Path
+  | |________________________^
+help: Organize imports
+  |
+3 |
+  -
+4 | ROOT = Path(__file__).resolve().parents[2]
+  |
+
+Found 2 errors.
+[*] 2 fixable with `--fix`.

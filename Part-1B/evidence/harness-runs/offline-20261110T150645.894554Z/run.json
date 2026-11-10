@@ -1,0 +1,60 @@
+{
+  "run_id": "offline-20261110T150645.894554Z",
+  "run_type": "offline",
+  "started_at_utc": "2026-11-10T15:06:45.896061Z",
+  "completed_at_utc": "2026-11-10T15:06:50.224507Z",
+  "gates": [
+    {
+      "name": "compileall",
+      "command": [
+        "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1105-1297-0_26.1105.1297.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "tests",
+        ".harness"
+      ],
+      "started_at_utc": "2026-11-10T15:06:45.899647Z",
+      "completed_at_utc": "2026-11-10T15:06:46.328588Z",
+      "exit_code": 0,
+      "status": "passed",
+      "stdout_file": "compileall.stdout.txt",
+      "stderr_file": "compileall.stderr.txt"
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1105-1297-0_26.1105.1297.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        ".harness"
+      ],
+      "started_at_utc": "2026-11-10T15:06:46.328588Z",
+      "completed_at_utc": "2026-11-10T15:06:46.773715Z",
+      "exit_code": 0,
+      "status": "passed",
+      "stdout_file": "ruff.stdout.txt",
+      "stderr_file": "ruff.stderr.txt"
+    },
+    {
+      "name": "pytest",
+      "command": [
+        "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1105-1297-0_26.1105.1297.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "started_at_utc": "2026-11-10T15:06:46.773715Z",
+      "completed_at_utc": "2026-11-10T15:06:50.224507Z",
+      "exit_code": 0,
+      "status": "passed",
+      "stdout_file": "pytest.stdout.txt",
+      "stderr_file": "pytest.stderr.txt"
+    }
+  ],
+  "overall_status": "passed"
+}

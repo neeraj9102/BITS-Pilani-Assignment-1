@@ -1,0 +1,33 @@
+B033 [*] Sets should not contain duplicate item `"week"`
+  --> src\reminder_agent\request_analysis.py:76:63
+   |
+71 |     "remind", "reminder", "reminders", "set", "the", "this", "to", "with",
+72 |     "tomorrow", "today", "yesterday", "tonight", "next", "coming", "month",
+73 |     "week", "year", "monday", "tuesday", "wednesday", "thursday", "friday",
+   |     ------ Previous occurrence here
+74 |     "saturday", "sunday", "move", "reschedule", "postpone", "delay", "shift",
+75 |     "push", "back", "change", "snooze", "snoozing", "hour", "hours", "hr",
+76 |     "hrs", "minute", "minutes", "min", "mins", "day", "days", "week", "weeks",
+   |                                                               ^^^^^^
+77 | }
+   |
+help: Remove duplicate item
+   |
+75 |     "push", "back", "change", "snooze", "snoozing", "hour", "hours", "hr",
+   -     "hrs", "minute", "minutes", "min", "mins", "day", "days", "week", "weeks",
+76 +     "hrs", "minute", "minutes", "min", "mins", "day", "days", "weeks",
+77 | }
+   |
+
+E501 Line too long (105 > 100)
+   --> src\reminder_agent\request_analysis.py:110:101
+    |
+109 | def _date_complete(text: str) -> bool:
+110 |     date_match = next((pattern.search(text) for pattern in _DATE_PATTERNS if pattern.search(text)), None)
+    |                                                                                                     ^^^^^
+111 |     if date_match is None:
+112 |         return False
+    |
+
+Found 2 errors.
+[*] 1 fixable with `--fix`.

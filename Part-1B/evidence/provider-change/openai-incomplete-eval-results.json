@@ -1,0 +1,412 @@
+{
+  "format_version": "1.0",
+  "provider": "OpenAI",
+  "model": null,
+  "generation_settings": {
+    "max_output_tokens": 400,
+    "timeout_seconds": 60,
+    "max_retries": 1,
+    "store": false,
+    "structured_outputs": "strict"
+  },
+  "dataset_version": "1.0.0",
+  "dataset_sha256": "65343d2d7495a7e72ed52704a056eb46a13167bf8625ce1f6d7c20fef67d9b61",
+  "started_at_utc": "2026-11-10T10:43:43.598607+00:00",
+  "completed_at_utc": "2026-11-10T10:43:43.665720+00:00",
+  "semantic_threshold": 0.85,
+  "layer_summary": {
+    "structural_passes": 0,
+    "property_passes": 0,
+    "semantic_scored_cases": 0
+  },
+  "aggregate": {
+    "decision": "INCOMPLETE",
+    "semantic_mean": null,
+    "semantic_threshold": 0.85,
+    "case_count": 18,
+    "structural_failures": 0,
+    "property_failures": 0,
+    "infrastructure_failures": 18
+  },
+  "cases": [
+    {
+      "case_id": "REM-001",
+      "category": "representative",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-002",
+      "category": "representative",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-003",
+      "category": "representative",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-004",
+      "category": "representative",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-005",
+      "category": "boundary",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-006",
+      "category": "boundary",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-007",
+      "category": "boundary",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-008",
+      "category": "ambiguous",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-009",
+      "category": "ambiguous",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-010",
+      "category": "ambiguous",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-011",
+      "category": "missing_information",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-012",
+      "category": "missing_information",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-013",
+      "category": "missing_information",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-014",
+      "category": "malformed",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-015",
+      "category": "malformed",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-016",
+      "category": "adversarial_guardrail",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-017",
+      "category": "adversarial_guardrail",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    },
+    {
+      "case_id": "REM-018",
+      "category": "adversarial_guardrail",
+      "model_output": null,
+      "structural": {
+        "status": "BLOCKED",
+        "errors": [
+          "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+        ]
+      },
+      "properties": {
+        "status": "BLOCKED",
+        "checks": []
+      },
+      "semantic": {
+        "score": null,
+        "criteria": []
+      },
+      "failure_category": "infrastructure",
+      "failure_message": "required live-evaluation configuration is missing: OPENAI_API_KEY, REMINDER_MODEL"
+    }
+  ],
+  "credentials_recorded": false
+}

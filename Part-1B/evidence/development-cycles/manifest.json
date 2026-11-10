@@ -1,0 +1,98 @@
+{
+  "evidence_type": "verbatim development test command output",
+  "created_at_utc": "2026-11-10T16:24:40.227215+05:30",
+  "records": [
+    {
+      "source_file": "work/part1b-pre-agent-pytest.txt",
+      "evidence_file": "part1b-pre-agent-pytest.txt",
+      "modified_at_utc": "2026-11-10T14:16:11.318206+05:30",
+      "bytes": 2079,
+      "sha256": "27626d6180f8d6775836db5aa39c36612c451b8f7ad03fa01f25f60be4537c46"
+    },
+    {
+      "source_file": "work/part1b-us1-before-implementation.txt",
+      "evidence_file": "part1b-us1-before-implementation.txt",
+      "modified_at_utc": "2026-11-10T14:16:46.26627+05:30",
+      "bytes": 1063,
+      "sha256": "4b71dd25bcd5632d93899d97f4e48fa403ec840d2b71ca5b40bb3eafc444b07f"
+    },
+    {
+      "source_file": "work/part1b-us1-after-impl.txt",
+      "evidence_file": "part1b-us1-after-impl.txt",
+      "modified_at_utc": "2026-11-10T14:18:56.346051+05:30",
+      "bytes": 101,
+      "sha256": "adfa176211c965cb3f53a6234b4cd0f1e7cf5c13f55dfa51c282e37e902633fa"
+    },
+    {
+      "source_file": "work/part1b-us2-us3-before-repair.txt",
+      "evidence_file": "part1b-us2-us3-before-repair.txt",
+      "modified_at_utc": "2026-11-10T15:46:38.044308+05:30",
+      "bytes": 1208,
+      "sha256": "012240208183117fef6c278a3d253bc4f984dcef1c8af82d4512dc47beb2147e"
+    },
+    {
+      "source_file": "work/part1b-us2-us3-after-repair.txt",
+      "evidence_file": "part1b-us2-us3-after-repair.txt",
+      "modified_at_utc": "2026-11-10T15:48:20.973359+05:30",
+      "bytes": 101,
+      "sha256": "3fe584e690458843034c2bdd432854451ca8afb82a944f8956be8e71e737e32d"
+    },
+    {
+      "source_file": "work/part1b-evaluator-before-implementation.txt",
+      "evidence_file": "part1b-evaluator-before-implementation.txt",
+      "modified_at_utc": "2026-11-10T15:56:16.714961+05:30",
+      "bytes": 915,
+      "sha256": "05fcc5c8a91de5941ca2d9ad3175436b30c25cd2634b53dd027c8dae72457da0"
+    },
+    {
+      "source_file": "work/part1b-policy-test-first-20261110.txt",
+      "evidence_file": "part1b-policy-test-first-20261110.txt",
+      "modified_at_utc": "2026-11-10T13:54:07.1498259Z",
+      "bytes": 4647,
+      "sha256": "a5599588c2204060c333de841bd1910373e99a47c4739c20c2a5e8fe2f60eba0"
+    },
+    {
+      "source_file": "work/part1b-policy-after-implementation-20261110.txt",
+      "evidence_file": "part1b-policy-after-implementation-20261110.txt",
+      "modified_at_utc": "2026-11-10T14:01:09.5197691Z",
+      "bytes": 100,
+      "sha256": "d6cc10dc61069c05acb0c7dd337abf9192c59f30bf59943ba70929f0ce642a57"
+    },
+    {
+      "source_file": "tests/unit/test_request_guardrails.py",
+      "evidence_file": "part1b-request-policy-before-implementation-20261110.txt",
+      "modified_at_utc": "2026-11-10T14:59:56.9797951Z",
+      "bytes": 1180,
+      "sha256": "c499e007e9a3268a5e49e9c15d4bac8d82a74057da8e036e790dc31f1699fcb8"
+    },
+    {
+      "source_file": "tests/unit/test_request_guardrails.py",
+      "evidence_file": "part1b-request-policy-test-first-import-path-incomplete-20261110.txt",
+      "modified_at_utc": "2026-11-10T14:59:37.6523608Z",
+      "bytes": 314,
+      "sha256": "1c8e1e47ea307cb0591d0e1086dcc991bd48b307f05535a468d1905866f36503"
+    },
+    {
+      "source_file": "tests/unit/test_request_guardrails.py",
+      "evidence_file": "part1b-request-policy-after-implementation-20261110.txt",
+      "modified_at_utc": "2026-11-10T15:24:29.8565055Z",
+      "bytes": 101,
+      "sha256": "7787d249c33bc003d82cecbb93594b8c355a5419e262b928da2793f158edaede"
+    },
+    {
+      "source_file": "tests/unit/test_request_guardrails.py",
+      "evidence_file": "part1b-relative-time-before-implementation-20261110.txt",
+      "modified_at_utc": "2026-11-10T15:12:25.0351855Z",
+      "bytes": 1637,
+      "sha256": "b3d12acca9ed985635b72ec3acd6dc49584bec11fa220734e11114e79a7ec09e"
+    },
+    {
+      "source_file": "tests/unit/test_request_guardrails.py",
+      "evidence_file": "part1b-relative-time-after-implementation-20261110.txt",
+      "modified_at_utc": "2026-11-10T15:13:06.6183724Z",
+      "bytes": 101,
+      "sha256": "0e537acc810bfca03d9bafcdc4a4d1ba41196227703d2be25191e1d02179d0ef"
+    }
+  ],
+  "updated_at_utc": "2026-11-10T15:25:09.9908753Z"
+}

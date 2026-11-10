@@ -1,0 +1,1 @@
+{"decision":"INCOMPLETE","semantic_mean":null,"cases":18,"infrastructure_failures":18,"result_file":"C:\\Users\\hp\\Documents\\Codex\\2026-11-09\\i-have-uploaded-two-important-files\\outputs\\Assignment-1\\Part-1B\\evidence\\eval-results.json"}

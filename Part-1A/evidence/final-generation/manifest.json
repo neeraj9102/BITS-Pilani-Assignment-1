@@ -1,0 +1,302 @@
+{
+  "snapshot": "final-generation",
+  "part": "Part-1A",
+  "created_at_utc": "2026-11-10T10:55:50.089564+00:00",
+  "files": [
+    {
+      "path": ".agents/skills/speckit-analyze/SKILL.md",
+      "sha256": "fad1c37a451e017995b15fc3eefe243274642fbb3ff7c8a5ab021908df71aa93",
+      "bytes": 12035
+    },
+    {
+      "path": ".agents/skills/speckit-checklist/SKILL.md",
+      "sha256": "5c1dce9333a2b733422e2dc75de7fc4d63ba91a460833d14ef3966a672328b9d",
+      "bytes": 22657
+    },
+    {
+      "path": ".agents/skills/speckit-clarify/SKILL.md",
+      "sha256": "1e9de2b2a673c923f7ca650fc40e4d5f24654163c577e0f1ceb70edfaa08114b",
+      "bytes": 19707
+    },
+    {
+      "path": ".agents/skills/speckit-constitution/SKILL.md",
+      "sha256": "ff6604c8424d4f4edf80f19ccfda1ede1a1dc5091a397cc1f0078a0bc3b0a538",
+      "bytes": 10520
+    },
+    {
+      "path": ".agents/skills/speckit-converge/SKILL.md",
+      "sha256": "369e168cbcc9f903d1b8f3f360a32d24a7ebf3d07066b8676032cffcafbebd9e",
+      "bytes": 13455
+    },
+    {
+      "path": ".agents/skills/speckit-implement/SKILL.md",
+      "sha256": "4d58a80ede8d837798d13a838b83a88fd4335104d0806d27f8018664a1ee0b85",
+      "bytes": 13083
+    },
+    {
+      "path": ".agents/skills/speckit-plan/SKILL.md",
+      "sha256": "0834b2298c078b0a89ee64a3e47e140cc9b31c4049492bd504491199a0fe3e73",
+      "bytes": 8239
+    },
+    {
+      "path": ".agents/skills/speckit-specify/SKILL.md",
+      "sha256": "37417c591b037e48507a622950f0b5b3596f65bfc0726eb544052dceedcaa92c",
+      "bytes": 19017
+    },
+    {
+      "path": ".agents/skills/speckit-tasks/SKILL.md",
+      "sha256": "1e1d18b34e39d62d6388297f035505905741b07973102e0d44aa8647d85ab093",
+      "bytes": 11582
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "c5ded0cfa63eca4867c6fc9ac7ebeccfdf062ee7d8ab02646e1b302421c059ad",
+      "bytes": 147
+    },
+    {
+      "path": ".harness/harness-run.schema.json",
+      "sha256": "00bb5f6381e9feebb8650027141abd792ed4ee28b2d27785e224ba892a584be3",
+      "bytes": 2438
+    },
+    {
+      "path": ".harness/run_harness.py",
+      "sha256": "ba9b3fc9dd04f0b65daeaefa27651312770d5a152dd7abb9826bbe4c7a5f30d5",
+      "bytes": 7778
+    },
+    {
+      "path": ".specify/.gitignore",
+      "sha256": "0a61c5378b0bb2e0f85babff99c8b166f2170a2c12378cd17d929aa19296ec88",
+      "bytes": 586
+    },
+    {
+      "path": ".specify/feature.json",
+      "sha256": "99065dd9e1f3dd93c15ef5291af2b638e636d3abc0242b8ca9485e4ac20d753b",
+      "bytes": 45
+    },
+    {
+      "path": ".specify/init-options.json",
+      "sha256": "0548798678e1bdb9957423a0025ded21f49dd73fce61a565e27b3e404387a496",
+      "bytes": 206
+    },
+    {
+      "path": ".specify/integration.json",
+      "sha256": "a472fa2305e32c83bf65b3af4892c9fee87c688c13670ad8f8956cf0381032ac",
+      "bytes": 286
+    },
+    {
+      "path": ".specify/integrations/codex.manifest.json",
+      "sha256": "31fdbcc946c67776e96e45f31ef055865e86799edb20ebdaf9f8b3ffe3080bb1",
+      "bytes": 1178
+    },
+    {
+      "path": ".specify/integrations/speckit.manifest.json",
+      "sha256": "112f84e4a21b9fae169fc12fcacdbb3eb2b75d117469f34c9cd98fc04975f6ec",
+      "bytes": 1535
+    },
+    {
+      "path": ".specify/memory/.constitution-template.json",
+      "sha256": "8fc4b39294bae0c10d59547ad7d415b6f0e890d656cbf7171dd567f4e9054711",
+      "bytes": 103
+    },
+    {
+      "path": ".specify/memory/constitution.md",
+      "sha256": "caef17cf882fbcb158c5d04cd1462e6142a233e43845d585149309945ed41d1c",
+      "bytes": 3550
+    },
+    {
+      "path": ".specify/scripts/powershell/check-prerequisites.ps1",
+      "sha256": "f48e586b57cc049ea83ade5acecb466f861aee4fb444dab54bbafc813222da10",
+      "bytes": 7085
+    },
+    {
+      "path": ".specify/scripts/powershell/common.ps1",
+      "sha256": "54b59523b13fd8f884ff8b6b4e74fded922cdcc884965ff720392ca64ec1aa47",
+      "bytes": 35317
+    },
+    {
+      "path": ".specify/scripts/powershell/create-new-feature.ps1",
+      "sha256": "481c7368541a816b1679e5ed65fa9e5aea84b09f8be3a02ff8a340e3b48dd58a",
+      "bytes": 14876
+    },
+    {
+      "path": ".specify/scripts/powershell/resolve-template.ps1",
+      "sha256": "e49c565a09902e4ebd4b5a51c4e014d5067fdee5b1592f15cb44ef31f430d745",
+      "bytes": 889
+    },
+    {
+      "path": ".specify/scripts/powershell/setup-plan.ps1",
+      "sha256": "5939ef98418e8dc8cc722ef53ba359fc814f3d2a9fd7620f04e8d145a7041f1a",
+      "bytes": 3062
+    },
+    {
+      "path": ".specify/scripts/powershell/setup-tasks.ps1",
+      "sha256": "a1a5002280b3016e5f5b150719eb5442b8505abf325ef266139becde2c070d33",
+      "bytes": 3977
+    },
+    {
+      "path": ".specify/templates/checklist-template.md",
+      "sha256": "70bbc48e884fab372ffb09e83e78ff983e28b69caebf8cd9964a02b6836683ac",
+      "bytes": 2033
+    },
+    {
+      "path": ".specify/templates/constitution-template.md",
+      "sha256": "ce7549540fa45543cca797a150201d868e64495fdff39dc38246fb17bd4024b3",
+      "bytes": 2346
+    },
+    {
+      "path": ".specify/templates/plan-template.md",
+      "sha256": "a828ad6206526574ab3fc99be6d0154588cb1c9774c5919d71b81ab5b2dbffa0",
+      "bytes": 3682
+    },
+    {
+      "path": ".specify/templates/spec-template.md",
+      "sha256": "3945437fc35cd30a5b2bf7beea680337c3516826d3efa5a6b92c4a7eca1ba28e",
+      "bytes": 4556
+    },
+    {
+      "path": ".specify/templates/tasks-template.md",
+      "sha256": "b0f527d41e546af0c31903e04f9b20965b6b497b573792198f663a64ce128863",
+      "bytes": 9171
+    },
+    {
+      "path": ".specify/workflows/speckit/workflow.yml",
+      "sha256": "177761c5e7df28126beea043b5cb45aeaf7958090c022dc11ac71399422fcfbc",
+      "bytes": 2118
+    },
+    {
+      "path": ".specify/workflows/workflow-registry.json",
+      "sha256": "728e625caa9da2d7d892fcb8129ccb24439a17cccc1df03c257edb707e4fe355",
+      "bytes": 381
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "ce92c6b584a1c405cd80f6657ce9b57458901e7357fd861caabcb02408ab63d6",
+      "bytes": 742
+    },
+    {
+      "path": "README.md",
+      "sha256": "15dcb37abdbcaf4d688217a739581b186bd48cc1a41f9fe63b8e05090968b91f",
+      "bytes": 1367
+    },
+    {
+      "path": "specs/001-smart-todo/checklists/quality.md",
+      "sha256": "bdf3ab8137368355d22218013f44a3122b46f710e52d5c4dd6224b9ce7f5a222",
+      "bytes": 2216
+    },
+    {
+      "path": "specs/001-smart-todo/checklists/requirements.md",
+      "sha256": "2df0f072547019dd92d840b34b32123f1bef28fd41dffa674f5a0b3e87c9ec1c",
+      "bytes": 1495
+    },
+    {
+      "path": "specs/001-smart-todo/clarifications.md",
+      "sha256": "fcb7e004db6982c17f1c2caa90889a9bb7e2a18a7c40cc9455b4c7d472f3868b",
+      "bytes": 1028
+    },
+    {
+      "path": "specs/001-smart-todo/contracts/cli-contract.md",
+      "sha256": "8ab6760aff29ab1c5139367bc8a37a0cb5b4bbe7d2b898cba7b57583816a11dc",
+      "bytes": 2039
+    },
+    {
+      "path": "specs/001-smart-todo/contracts/task-store.schema.json",
+      "sha256": "7ba675d9530ac27f3810f8e0c1699ff64406bf9183ed5c6d92ed3e4df5a2665c",
+      "bytes": 1314
+    },
+    {
+      "path": "specs/001-smart-todo/data-model.md",
+      "sha256": "6087a63a0f5c58c6bde9aa2686525df12c2c4c45808e773f085e2b37859f0e88",
+      "bytes": 2138
+    },
+    {
+      "path": "specs/001-smart-todo/plan.md",
+      "sha256": "de15a5630fbe7a7f45eed7697ecf68e69c9e779d749afdb2dcec8573a95f0186",
+      "bytes": 6292
+    },
+    {
+      "path": "specs/001-smart-todo/quickstart.md",
+      "sha256": "ad16d21859acd159d40859cbc3a328d4ffead043bd3b1b498669cef49f23f3d7",
+      "bytes": 1064
+    },
+    {
+      "path": "specs/001-smart-todo/research.md",
+      "sha256": "ef16bd7057b84b0e4fe4b6b5d6fb954d8a135acb808d50fe3102bc06f2998397",
+      "bytes": 3566
+    },
+    {
+      "path": "specs/001-smart-todo/spec.md",
+      "sha256": "8d42509fbef6926d8e55586488b6571317c01f13cc6ad5223a528a2c948935b5",
+      "bytes": 9433
+    },
+    {
+      "path": "specs/001-smart-todo/tasks.md",
+      "sha256": "b9a3db1ffb6afaf8d7f80dc0cda04e6fb5d5e69dbe04c7decf75fc87bb488c2a",
+      "bytes": 9577
+    },
+    {
+      "path": "src/smart_todo/__init__.py",
+      "sha256": "c41afc3502bef0d2bdfbbfbc35ea16e5d9832773c8b1e4aa84659d1ca74af253",
+      "bytes": 73
+    },
+    {
+      "path": "src/smart_todo/__main__.py",
+      "sha256": "b2a775e858b7eb311f3f5e1319bd5a8a6a701b4df61e544b7e2aa49617e5fd1c",
+      "bytes": 141
+    },
+    {
+      "path": "src/smart_todo/cli.py",
+      "sha256": "709078c50d33b833f228b689646079edb2b34ae2ce35886a1a81059bd2ed474f",
+      "bytes": 3524
+    },
+    {
+      "path": "src/smart_todo/errors.py",
+      "sha256": "06cfdb54a32592799c1e2959e3626265843adc60a660615dbdfedeede98ef819",
+      "bytes": 457
+    },
+    {
+      "path": "src/smart_todo/models.py",
+      "sha256": "3dedbe9e3bb40d775d206fbc50f45bf9a07fc6dc1586e89cce0f8624e0ba4348",
+      "bytes": 4312
+    },
+    {
+      "path": "src/smart_todo/service.py",
+      "sha256": "46d48a9b57029f55b2e7476b0ee0f8924bcb8703ac7ff7781c6ffab902c9f51e",
+      "bytes": 5260
+    },
+    {
+      "path": "src/smart_todo/storage.py",
+      "sha256": "4cb1d788ee4f796e652215e2305fee44c4c85b3036cf3204cb347512e31eb6b9",
+      "bytes": 4390
+    },
+    {
+      "path": "tests/contract/test_crud_cli.py",
+      "sha256": "6dc2d4011931ffcb56a8af7837b6dc587bb747341b0cdae442473f5226a98269",
+      "bytes": 3388
+    },
+    {
+      "path": "tests/contract/test_filter_sort_cli.py",
+      "sha256": "1809e05f8bfc177c7b79bcd5c9806aa907fd0ce1f2f4ceb389a4e8dfeceb05f1",
+      "bytes": 1777
+    },
+    {
+      "path": "tests/contract/test_status_cli.py",
+      "sha256": "5419e5938a065fe09f65b576648aefed5e30d87605972c5cdfd04004e2ff22ce",
+      "bytes": 1596
+    },
+    {
+      "path": "tests/unit/test_harness.py",
+      "sha256": "76f71145bdfe1c16275b65922945657cf08f5bafc47237632c1f6f71b0510fa8",
+      "bytes": 2750
+    },
+    {
+      "path": "tests/unit/test_models.py",
+      "sha256": "7d3bdccd499154904fd834c9e110a74a460f16e0b1b6c050bd6be59ca229d599",
+      "bytes": 1638
+    },
+    {
+      "path": "tests/unit/test_storage.py",
+      "sha256": "af254de03939ebef64d62b471b440029046eb5090d4ffbd233ae6587ffae71f2",
+      "bytes": 3119
+    }
+  ]
+}

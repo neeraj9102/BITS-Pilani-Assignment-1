@@ -1,0 +1,21 @@
+{
+  "attempt_id": "live-20261110T142926.550640Z",
+  "attempt_type": "live_evaluation_attempt",
+  "provider": "Ollama (local)",
+  "model": "qwen2.5:7b",
+  "command": [
+    "python",
+    ".harness/run_live.py"
+  ],
+  "started_at_utc": "2026-11-10T14:29:26.550640Z",
+  "interrupted_at_utc": "2026-11-10T14:33:52Z",
+  "status": "interrupted_before_result",
+  "outcome": null,
+  "semantic_mean": null,
+  "reason": "The 7B attempt was interrupted after repeated system/status checks stalled while the model was loading. No harness run.json, case outputs, or score were produced. This is a resource limitation, not a model-quality FAIL or PASS.",
+  "baseline_ollama_memory_report": "At server startup before this attempt, Ollama reported 7.7 GiB total and 930.8 MiB available.",
+  "model_size_bytes": 4683087332,
+  "dataset_sha256": "65343d2d7495a7e72ed52704a056eb46a13167bf8625ce1f6d7c20fef67d9b61",
+  "previous_completed_result": "../live-20261110T140630.965248Z/eval-results.json",
+  "credentials_recorded": false
+}

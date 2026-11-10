@@ -1,0 +1,338 @@
+E501 Line too long (104 > 100)
+  --> .harness\evaluate.py:26:101
+   |
+24 |     ROOT / "specs" / "001-reminder-agent" / "contracts" / "evaluation-dataset.schema.json"
+25 | )
+26 | OUTPUT_SCHEMA_PATH = ROOT / "specs" / "001-reminder-agent" / "contracts" / "reminder-output.schema.json"
+   |                                                                                                     ^^^^
+27 | RESULT_PATH = ROOT / "evidence" / "eval-results.json"
+28 | REQUIRED_CATEGORIES = {
+   |
+
+E501 Line too long (106 > 100)
+  --> .harness\evaluate.py:76:101
+   |
+74 |     )
+75 |     if errors:
+76 |         raise ValueError("evaluation dataset is invalid: " + "; ".join(error.message for error in errors))
+   |                                                                                                     ^^^^^^
+77 |     cases = dataset["cases"]
+78 |     if len({case["id"] for case in cases}) != len(cases):
+   |
+
+E501 Line too long (102 > 100)
+   --> .harness\evaluate.py:175:101
+    |
+173 |     target_id = case["expected"].get("target_reminder_id")
+174 |     target = next(
+175 |         (item for item in case["input"].get("existing_reminders", []) if item.get("id") == target_id),
+    |                                                                                                     ^^
+176 |         None,
+177 |     )
+    |
+
+E501 Line too long (101 > 100)
+   --> .harness\evaluate.py:196:101
+    |
+194 |         return {
+195 |             "status": "FAIL",
+196 |             "checks": [{"property": "output_object", "passed": False, "detail": "no object output"}],
+    |                                                                                                     ^
+197 |         }
+    |
+
+E501 Line too long (105 > 100)
+   --> .harness\evaluate.py:199:101
+    |
+197 |         }
+198 |
+199 |     add("expected_intent", output.get("intent") == expected["intent"], "intent equals case ground truth")
+    |                                                                                                     ^^^^^
+200 |     add("expected_status", output.get("status") == expected["status"], "status equals case ground truth")
+201 |     add(
+    |
+
+E501 Line too long (105 > 100)
+   --> .harness\evaluate.py:200:101
+    |
+199 |     add("expected_intent", output.get("intent") == expected["intent"], "intent equals case ground truth")
+200 |     add("expected_status", output.get("status") == expected["status"], "status equals case ground truth")
+    |                                                                                                     ^^^^^
+201 |     add(
+202 |         "expected_target",
+    |
+
+E501 Line too long (114 > 100)
+   --> .harness\evaluate.py:224:101
+    |
+222 |             due = _parse_datetime(reminder.get("due_at")) if isinstance(reminder, dict) else None
+223 |             reference = _parse_datetime(case["input"].get("reference_now"))
+224 |             result = due is not None and reference is not None and due.astimezone(UTC) > reference.astimezone(UTC)
+    |                                                                                                     ^^^^^^^^^^^^^^
+225 |             detail = "ready due time is strictly later than reference_now"
+226 |         elif property_name == "target_is_supplied":
+    |
+
+E501 Line too long (105 > 100)
+   --> .harness\evaluate.py:242:101
+    |
+240 |             detail = "ambiguous or incomplete request has no ready proposal and asks a question"
+241 |         elif property_name == "unsafe_request_rejected":
+242 |             result = output.get("status") == "rejected" and output.get("reason_code") == "unsafe_request"
+    |                                                                                                     ^^^^^
+243 |             detail = "unsafe request is rejected with unsafe_request reason"
+244 |         elif property_name == "unsupported_action_rejected":
+    |
+
+E501 Line too long (104 > 100)
+   --> .harness\evaluate.py:251:101
+    |
+249 |             detail = "unsupported action is rejected with unsupported_action reason"
+250 |         elif property_name == "past_time_rejected":
+251 |             result = output.get("status") == "rejected" and output.get("reason_code") == "past_datetime"
+    |                                                                                                     ^^^^
+252 |             detail = "past due time is rejected with past_datetime reason"
+253 |         elif property_name == "snooze_base_arithmetic":
+    |
+
+E501 Line too long (105 > 100)
+   --> .harness\evaluate.py:256:101
+    |
+254 |             due = _parse_datetime(reminder.get("due_at")) if isinstance(reminder, dict) else None
+255 |             expected_due = _snooze_expected(case)
+256 |             result = due is not None and expected_due is not None and due.astimezone(UTC) == expected_due
+    |                                                                                                     ^^^^^
+257 |             detail = "snooze equals max(reference_now, current_due_at) plus requested duration"
+258 |         add(property_name, result, detail)
+    |
+
+E501 Line too long (116 > 100)
+   --> .harness\evaluate.py:279:101
+    |
+277 |         actual = _parse_datetime(reminder.get("due_at")) if isinstance(reminder, dict) else None
+278 |         wanted = _parse_datetime(expected["expected_due_at"])
+279 |         return float(actual is not None and wanted is not None and actual.astimezone(UTC) == wanted.astimezone(UTC))
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+280 |     if name == "timezone_match":
+281 |         zone = reminder.get("timezone") if isinstance(reminder, dict) else None
+    |
+
+E501 Line too long (109 > 100)
+   --> .harness\evaluate.py:311:101
+    |
+311 | def aggregate_results(case_results: list[dict[str, Any]], *, threshold: float = THRESHOLD) -> dict[str, Any]:
+    |                                                                                                     ^^^^^^^^^
+312 |     semantic_scores = [
+313 |         item["semantic"]["score"]
+    |
+
+E501 Line too long (105 > 100)
+   --> .harness\evaluate.py:320:101
+    |
+318 |         round(sum(semantic_scores) / len(semantic_scores), 6) if semantic_scores else None
+319 |     )
+320 |     infrastructure_count = sum(item.get("failure_category") == "infrastructure" for item in case_results)
+    |                                                                                                     ^^^^^
+321 |     structural_failures = sum(
+322 |         item.get("structural", {}).get("status") == "FAIL" for item in case_results
+    |
+
+E501 Line too long (109 > 100)
+   --> .harness\evaluate.py:428:101
+    |
+426 |         failure_message = f"evaluation case raised {type(exc).__name__}"
+427 |
+428 |     if output is None and failure_category in {"infrastructure", "model_refusal", "incomplete_model_output"}:
+    |                                                                                                     ^^^^^^^^^
+429 |         status = "BLOCKED" if failure_category == "infrastructure" else "FAIL"
+430 |         return {
+    |
+
+E501 Line too long (102 > 100)
+   --> .harness\evaluate.py:525:101
+    |
+523 |         "semantic_threshold": dataset["threshold"],
+524 |         "layer_summary": {
+525 |             "structural_passes": sum(item["structural"]["status"] == "PASS" for item in case_results),
+    |                                                                                                     ^^
+526 |             "property_passes": sum(item["properties"]["status"] == "PASS" for item in case_results),
+527 |             "semantic_scored_cases": sum(item["semantic"]["score"] is not None for item in case_results),
+    |
+
+E501 Line too long (105 > 100)
+   --> .harness\evaluate.py:527:101
+    |
+525 |             "structural_passes": sum(item["structural"]["status"] == "PASS" for item in case_results),
+526 |             "property_passes": sum(item["properties"]["status"] == "PASS" for item in case_results),
+527 |             "semantic_scored_cases": sum(item["semantic"]["score"] is not None for item in case_results),
+    |                                                                                                     ^^^^^
+528 |         },
+529 |         "aggregate": aggregate,
+    |
+
+F401 [*] `json` imported but unused
+ --> src\reminder_agent\agent.py:5:8
+  |
+3 | from __future__ import annotations
+4 |
+5 | import json
+  |        ^^^^
+6 | import os
+7 | from pathlib import Path
+  |
+help: Remove unused import: `json`
+  |
+4 |
+  - import json
+5 | import os
+  |
+
+F401 [*] `reminder_agent.models.ReminderRequest` imported but unused
+  --> src\reminder_agent\agent.py:16:5
+   |
+14 |     MalformedRequest,
+15 |     ReminderAgentError,
+16 |     ReminderRequest,
+   |     ^^^^^^^^^^^^^^^
+17 | )
+18 | from reminder_agent.validation import parse_request_envelope, validate_output
+   |
+help: Remove unused import: `reminder_agent.models.ReminderRequest`
+   |
+15 |     ReminderAgentError,
+   -     ReminderRequest,
+16 | )
+   |
+
+E501 Line too long (104 > 100)
+  --> src\reminder_agent\validation.py:24:101
+   |
+23 | ROOT = Path(__file__).resolve().parents[2]
+24 | OUTPUT_SCHEMA_PATH = ROOT / "specs" / "001-reminder-agent" / "contracts" / "reminder-output.schema.json"
+   |                                                                                                     ^^^^
+25 | SNOOZE_DURATION = re.compile(
+26 |     r"(?<![\w-])(\d+(?:\.\d+)?)\s*(minutes?|mins?|hours?|hrs?|days?|weeks?)\b",
+   |
+
+E501 Line too long (101 > 100)
+  --> src\reminder_agent\validation.py:49:101
+   |
+49 | def parse_request_envelope(value: Any, *, default_timezone: str = "Asia/Kolkata") -> ReminderRequest:
+   |                                                                                                     ^
+50 |     allowed = {"request", "reference_now", "timezone", "existing_reminders"}
+51 |     required = {"request", "reference_now"}
+   |
+
+E501 Line too long (103 > 100)
+  --> src\reminder_agent\validation.py:52:101
+   |
+50 |     allowed = {"request", "reference_now", "timezone", "existing_reminders"}
+51 |     required = {"request", "reference_now"}
+52 |     if not isinstance(value, dict) or not required.issubset(value) or not set(value).issubset(allowed):
+   |                                                                                                     ^^^
+53 |         raise MalformedRequest("request envelope has missing or unknown fields")
+54 |     request_text = value["request"]
+   |
+
+E501 Line too long (104 > 100)
+   --> src\reminder_agent\validation.py:144:101
+    |
+142 | def validate_output(value: Any, request: ReminderRequest) -> dict[str, Any]:
+143 |     output = parse_output_json(value) if isinstance(value, (str, bytes)) else value
+144 |     errors = sorted(output_validator().iter_errors(output), key=lambda error: list(error.absolute_path))
+    |                                                                                                     ^^^^
+145 |     if errors:
+146 |         first = errors[0]
+    |
+
+E501 Line too long (103 > 100)
+   --> src\reminder_agent\validation.py:160:101
+    |
+158 |     if status == "ready":
+159 |         if intent not in {"create", "reschedule", "snooze"}:
+160 |             raise OutputValidationError("ready status requires a create, reschedule, or snooze intent")
+    |                                                                                                     ^^^
+161 |         if reminder is None or missing or question is not None or reason is not None:
+162 |             raise OutputValidationError("ready result has inconsistent nullable fields")
+    |
+
+E501 Line too long (101 > 100)
+   --> src\reminder_agent\validation.py:177:101
+    |
+175 |             or zoned_due.replace(tzinfo=None) != due_at.replace(tzinfo=None)
+176 |         ):
+177 |             raise OutputValidationError("reminder timestamp offset does not match its IANA timezone")
+    |                                                                                                     ^
+178 |         if due_at <= request.reference_now:
+179 |             raise OutputValidationError("ready reminder due_at must be later than reference_now")
+    |
+
+E501 Line too long (102 > 100)
+   --> src\reminder_agent\validation.py:185:101
+    |
+183 |             targets = [item for item in request.existing_reminders if item.id == target]
+184 |             if not target or len(targets) != 1:
+185 |                 raise OutputValidationError("ready reschedule/snooze must name one supplied reminder")
+    |                                                                                                     ^^
+186 |         if intent == "snooze":
+187 |             duration = _duration_from_snooze_request(request.request)
+    |
+
+E501 Line too long (125 > 100)
+   --> src\reminder_agent\validation.py:197:101
+    |
+195 |                 if due_at.astimezone(UTC) != expected_due:
+196 |                     raise OutputValidationError(
+197 |                         "snooze due time must equal the later of reference_now or current due_at plus the requested duration"
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+198 |                     )
+199 |     elif status == "needs_clarification":
+    |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> tests\contract\test_dataset.py:1:1
+  |
+1 | / import json
+2 | | from collections import Counter
+3 | | from pathlib import Path
+4 | |
+5 | | from jsonschema import Draft202012Validator, FormatChecker
+  | |__________________________________________________________^
+help: Organize imports
+  |
+6 |
+  -
+7 | ROOT = Path(__file__).resolve().parents[2]
+  |
+
+F401 [*] `pytest` imported but unused
+ --> tests\unit\test_create_agent.py:1:8
+  |
+1 | import pytest
+  |        ^^^^^^
+2 |
+3 | from reminder_agent.agent import ReminderAgent
+  |
+help: Remove unused import: `pytest`
+  |
+  - import pytest
+1 |
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> tests\unit\test_evaluation.py:1:1
+  |
+1 | / import importlib.util
+2 | | from pathlib import Path
+3 | |
+4 | | import pytest
+  | |_____________^
+help: Organize imports
+  |
+5 |
+  -
+6 | ROOT = Path(__file__).resolve().parents[2]
+  |
+
+Found 29 errors.
+[*] 5 fixable with `--fix`.

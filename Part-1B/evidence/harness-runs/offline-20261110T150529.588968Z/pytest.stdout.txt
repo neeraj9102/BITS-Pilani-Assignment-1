@@ -1,0 +1,100 @@
+....................F.....................................FF....         [100%]
+================================== FAILURES ===================================
+________ test_missing_date_and_time_produce_a_structured_clarification ________
+
+fake_client_factory = <class 'conftest.FakeClient'>
+
+    def test_missing_date_and_time_produce_a_structured_clarification(fake_client_factory):
+        request = {
+            "request": "Remind me to call the dentist",
+            "reference_now": "2026-11-10T10:00:00+05:30",
+            "timezone": "Asia/Kolkata",
+            "existing_reminders": [],
+        }
+        clarification = {
+            "intent": "clarify",
+            "status": "needs_clarification",
+            "reminder": None,
+            "target_reminder_id": None,
+            "missing_fields": ["date", "time"],
+            "clarification_question": "What date and time should I use?",
+            "reason_code": None,
+        }
+        client = fake_client_factory([clarification])
+        result = ReminderAgent(client=client).run(request)
+>       assert result == clarification
+E       AssertionError: assert {'intent': 'c...d': None, ...} == {'intent': 'c...d': None, ...}
+E         
+E         Omitting 6 identical items, use -vv to show
+E         Differing items:
+E         {'clarification_question': 'Please provide the missing information: date, time.'} != {'clarification_question': 'What date and time should I use?'}
+E         Use -v to get more diff
+
+tests\unit\test_create_agent.py:45: AssertionError
+________ test_reschedule_targets_the_single_matching_context_reminder _________
+
+request_envelope = {'request': 'Move my dentist appointment to November 12 at 2 PM.', 'reference_now': '2026-11-10T10:00:00+05:30', 'timezone': 'Asia/Kolkata', 'existing_reminders': [{'id': 'R-7', 'title': 'Dentist', 'due_at': '2026-11-11T09:00:00+05:30'}]}
+fake_client_factory = <class 'conftest.FakeClient'>
+
+    def test_reschedule_targets_the_single_matching_context_reminder(
+        request_envelope, fake_client_factory
+    ):
+        request_envelope["request"] = "Move my dentist appointment to November 12 at 2 PM."
+        request_envelope["existing_reminders"] = [
+            {"id": "R-7", "title": "Dentist", "due_at": "2026-11-11T09:00:00+05:30"}
+        ]
+        expected = {
+            "intent": "reschedule",
+            "status": "ready",
+            "reminder": {
+                "title": "Dentist appointment",
+                "due_at": "2026-11-12T14:00:00+05:30",
+                "timezone": "Asia/Kolkata",
+            },
+            "target_reminder_id": "R-7",
+            "missing_fields": [],
+            "clarification_question": None,
+            "reason_code": None,
+        }
+        result = ReminderAgent(client=fake_client_factory([expected])).run(request_envelope)
+>       assert result == expected
+E       AssertionError: assert {'intent': 'r...': 'R-7', ...} == {'intent': 'r...': 'R-7', ...}
+E         
+E         Omitting 6 identical items, use -vv to show
+E         Differing items:
+E         {'reminder': {'title': 'Dentist', 'due_at': '2026-11-12T14:00:00+05:30', 'timezone': 'Asia/Kolkata'}} != {'reminder': {'title': 'Dentist appointment', 'due_at': '2026-11-12T14:00:00+05:30', 'timezone': 'Asia/Kolkata'}}
+E         Use -v to get more diff
+
+tests\unit\test_reschedule_agent.py:25: AssertionError
+_______________ test_no_matching_target_requires_clarification ________________
+
+request_envelope = {'request': 'Snooze my dentist appointment by 30 minutes.', 'reference_now': '2026-11-10T10:00:00+05:30', 'timezone': 'Asia/Kolkata', 'existing_reminders': []}
+fake_client_factory = <class 'conftest.FakeClient'>
+
+    def test_no_matching_target_requires_clarification(request_envelope, fake_client_factory):
+        request_envelope["request"] = "Snooze my dentist appointment by 30 minutes."
+        request_envelope["existing_reminders"] = []
+        expected = {
+            "intent": "clarify",
+            "status": "needs_clarification",
+            "reminder": None,
+            "target_reminder_id": None,
+            "missing_fields": ["existing_reminder"],
+            "clarification_question": "Which reminder should I snooze?",
+            "reason_code": None,
+        }
+        result = ReminderAgent(client=fake_client_factory([expected])).run(request_envelope)
+>       assert result == expected
+E       AssertionError: assert {'intent': 'c...d': None, ...} == {'intent': 'c...d': None, ...}
+E         
+E         Omitting 6 identical items, use -vv to show
+E         Differing items:
+E         {'clarification_question': 'Please provide the missing information: existing_reminder.'} != {'clarification_question': 'Which reminder should I snooze?'}
+E         Use -v to get more diff
+
+tests\unit\test_reschedule_agent.py:41: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_create_agent.py::test_missing_date_and_time_produce_a_structured_clarification
+FAILED tests/unit/test_reschedule_agent.py::test_reschedule_targets_the_single_matching_context_reminder
+FAILED tests/unit/test_reschedule_agent.py::test_no_matching_target_requires_clarification
+3 failed, 61 passed in 2.47s

@@ -1,0 +1,166 @@
+UP022 Prefer `capture_output` over sending `stdout` and `stderr` to `PIPE`
+   --> .harness\run_harness.py:108:21
+    |
+106 |       started = _utc_now()
+107 |       try:
+108 |           completed = subprocess.run(
+    |  _____________________^
+109 | |             command,
+110 | |             cwd=ROOT,
+111 | |             env=environment,
+112 | |             stdout=subprocess.PIPE,
+113 | |             stderr=subprocess.PIPE,
+114 | |             text=True,
+115 | |             encoding="utf-8",
+116 | |             errors="replace",
+117 | |             check=False,
+118 | |         )
+    | |_________^
+119 |           exit_code = completed.returncode
+120 |           stdout = completed.stdout
+    |
+help: Replace with `capture_output` keyword argument
+    |
+111 |             env=environment,
+    -             stdout=subprocess.PIPE,
+    -             stderr=subprocess.PIPE,
+112 +             capture_output=True,
+113 |             text=True,
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+UP035 [*] Import from `collections.abc` instead: `Sequence`
+  --> src\smart_todo\cli.py:8:1
+   |
+ 6 | import json
+ 7 | import sys
+ 8 | from typing import Sequence
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 9 |
+10 | from smart_todo.errors import TodoError
+   |
+help: Import from `collections.abc`
+  |
+7 | import sys
+  - from typing import Sequence
+8 + from collections.abc import Sequence
+9 |
+  |
+
+E501 Line too long (108 > 100)
+  --> src\smart_todo\cli.py:16:101
+   |
+14 | def _parser() -> argparse.ArgumentParser:
+15 |     parser = argparse.ArgumentParser(prog="smart-todo")
+16 |     parser.add_argument("--data-file", default=".data/tasks.json", help="path to the local JSON task store")
+   |                                                                                                     ^^^^^^^^
+17 |     commands = parser.add_subparsers(dest="command", required=True)
+   |
+
+E501 Line too long (102 > 100)
+  --> src\smart_todo\service.py:78:101
+   |
+76 |         if requested:
+77 |             wanted = {tag.casefold() for tag in requested}
+78 |             tasks = [task for task in tasks if wanted.issubset({tag.casefold() for tag in task.tags})]
+   |                                                                                                     ^^
+79 |         if sort is not None:
+80 |             if sort != "priority":
+   |
+
+E501 Line too long (104 > 100)
+   --> src\smart_todo\service.py:101:101
+    |
+ 99 |         old = Task.from_record(records[index])
+100 |         new_title = old.title if title is UNSET else validate_title(title)
+101 |         new_description = old.description if description is UNSET else validate_description(description)
+    |                                                                                                     ^^^^
+102 |         new_priority = old.priority if priority is UNSET else validate_priority(priority)
+103 |         new_tags = list(old.tags) if tags is UNSET else normalize_tags(tags)
+    |
+
+F401 [*] `smart_todo.models.TASK_ID_PATTERN` imported but unused
+  --> src\smart_todo\storage.py:12:31
+   |
+11 | from smart_todo.errors import StoreError, ValidationError
+12 | from smart_todo.models import TASK_ID_PATTERN, Task
+   |                               ^^^^^^^^^^^^^^^
+13 |
+14 | STORE_FIELDS = {"schema_version", "next_id", "next_creation_order", "tasks"}
+   |
+help: Remove unused import: `smart_todo.models.TASK_ID_PATTERN`
+   |
+11 | from smart_todo.errors import StoreError, ValidationError
+   - from smart_todo.models import TASK_ID_PATTERN, Task
+12 + from smart_todo.models import Task
+13 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests\contract\test_crud_cli.py:1:1
+   |
+ 1 | / import json
+ 2 | | import io
+ 3 | | import os
+ 4 | | import subprocess
+ 5 | | import sys
+ 6 | | from contextlib import redirect_stderr, redirect_stdout
+ 7 | | from pathlib import Path
+ 8 | | from types import SimpleNamespace
+ 9 | |
+10 | | from smart_todo.cli import main
+   | |_______________________________^
+help: Organize imports
+   |
+1  + import io
+2  | import json
+   - import io
+3  | import os
+--------------------------------------------------------------------------------
+10 | from smart_todo.cli import main
+   -
+11 |
+   |
+
+E501 Line too long (101 > 100)
+  --> tests\contract\test_crud_cli.py:36:101
+   |
+34 |     with redirect_stdout(stdout), redirect_stderr(stderr):
+35 |         returncode = main(["--data-file", str(store_path), *args])
+36 |     return SimpleNamespace(returncode=returncode, stdout=stdout.getvalue(), stderr=stderr.getvalue())
+   |                                                                                                     ^
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> tests\unit\test_harness.py:1:1
+  |
+1 | / import importlib.util
+2 | | from pathlib import Path
+  | |________________________^
+help: Organize imports
+  |
+3 |
+  -
+4 | ROOT = Path(__file__).resolve().parents[2]
+  |
+
+B007 Loop control variable `index` not used within loop body
+  --> tests\unit\test_harness.py:14:9
+   |
+12 | def valid_record():
+13 |     gates = []
+14 |     for index, name in enumerate(harness.GATE_ORDER):
+   |         ^^^^^
+15 |         gates.append(
+16 |             {
+   |
+help: Rename unused `index` to `_index`
+   |
+13 |     gates = []
+   -     for index, name in enumerate(harness.GATE_ORDER):
+14 +     for _index, name in enumerate(harness.GATE_ORDER):
+15 |         gates.append(
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 10 errors.
+[*] 4 fixable with `--fix` (2 unsafe fixes available with `--fix --unsafe-fixes`).

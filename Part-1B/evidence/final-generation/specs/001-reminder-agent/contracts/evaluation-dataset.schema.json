@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:assignment-1:reminder-agent:evaluation-dataset-schema",
+  "title": "Reminder Agent Evaluation Dataset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "threshold", "cases"],
+  "properties": {
+    "version": {"type": "string", "minLength": 1},
+    "threshold": {"const": 0.85},
+    "cases": {
+      "type": "array",
+      "minItems": 18,
+      "maxItems": 18,
+      "items": {"$ref": "#/$defs/case"}
+    }
+  },
+  "$defs": {
+    "existingReminder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "due_at"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "due_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "category", "input", "requirements", "expected", "rubric"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^REM-[0-9]{3}$"},
+        "category": {"enum": ["representative", "boundary", "ambiguous", "missing_information", "malformed", "adversarial_guardrail"]},
+        "input": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["request", "reference_now", "timezone", "existing_reminders"],
+          "properties": {
+            "request": {"type": "string"},
+            "reference_now": {"type": "string"},
+            "timezone": {"type": "string", "minLength": 1},
+            "existing_reminders": {"type": "array", "items": {"$ref": "#/$defs/existingReminder"}}
+          }
+        },
+        "requirements": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^(FR|SC)-[0-9]{3}$"}},
+        "expected": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["intent", "status", "target_reminder_id", "missing_fields", "reason_code", "expected_due_at", "expected_timezone", "title_concepts", "clarification_concepts", "properties"],
+          "properties": {
+            "intent": {"enum": ["create", "reschedule", "snooze", "clarify", "reject"]},
+            "status": {"enum": ["ready", "needs_clarification", "rejected"]},
+            "target_reminder_id": {"type": ["string", "null"]},
+            "missing_fields": {"type": "array", "uniqueItems": true, "items": {"enum": ["title", "date", "time", "timezone", "existing_reminder"]}},
+            "reason_code": {"type": ["string", "null"], "enum": ["malformed_input", "past_datetime", "unsupported_action", "unsafe_request", null]},
+            "expected_due_at": {"type": ["string", "null"], "format": "date-time"},
+            "expected_timezone": {"type": ["string", "null"]},
+            "title_concepts": {"type": "array", "items": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}},
+            "clarification_concepts": {"type": "array", "items": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}},
+            "properties": {"type": "array", "uniqueItems": true, "items": {"enum": ["due_time_in_future", "target_is_supplied", "ambiguous_requires_clarification", "unsafe_request_rejected", "unsupported_action_rejected", "past_time_rejected", "snooze_base_arithmetic"]}}
+          }
+        },
+        "rubric": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["criterion", "weight"],
+            "properties": {
+              "criterion": {"enum": ["intent_match", "status_match", "title_content", "due_time_match", "timezone_match", "target_match", "clarification_coverage", "rejection_reason", "missing_fields_match"]},
+              "weight": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {"contains": {"properties": {"category": {"const": "representative"}}, "required": ["category"]}, "minContains": 1},
+    {"contains": {"properties": {"category": {"const": "boundary"}}, "required": ["category"]}, "minContains": 1},
+    {"contains": {"properties": {"category": {"const": "ambiguous"}}, "required": ["category"]}, "minContains": 1},
+    {"contains": {"properties": {"category": {"const": "missing_information"}}, "required": ["category"]}, "minContains": 1},
+    {"contains": {"properties": {"category": {"const": "malformed"}}, "required": ["category"]}, "minContains": 1},
+    {"contains": {"properties": {"category": {"const": "adversarial_guardrail"}}, "required": ["category"]}, "minContains": 1}
+  ]
+}

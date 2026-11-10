@@ -1,0 +1,31 @@
+.FF............                                                          [100%]
+================================== FAILURES ===================================
+____________ test_create_duration_is_a_complete_relative_schedule _____________
+
+    def test_create_duration_is_a_complete_relative_schedule() -> None:
+        assessment = assess_request(_request("Remind me to check the oven in 15 minutes."))
+    
+>       assert assessment.missing_fields == ()
+E       AssertionError: assert ('date', 'time') == ()
+E         
+E         Left contains 2 more items, first extra item: 'date'
+E         Use -v to get more diff
+
+tests\unit\test_request_guardrails.py:59: AssertionError
+________ test_create_relative_duration_is_computed_from_reference_time ________
+
+    def test_create_relative_duration_is_computed_from_reference_time() -> None:
+        request = _request("Remind me to check the oven in 15 minutes.")
+        output = _ready_output(due_at="2026-11-10T11:15:00+05:30")
+    
+        guarded, reasons = apply_request_guardrails(output, request)
+    
+>       assert guarded["reminder"]["due_at"] == "2026-11-10T10:15:00+05:30"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not subscriptable
+
+tests\unit\test_request_guardrails.py:69: TypeError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_request_guardrails.py::test_create_duration_is_a_complete_relative_schedule
+FAILED tests/unit/test_request_guardrails.py::test_create_relative_duration_is_computed_from_reference_time
+2 failed, 13 passed in 0.52s

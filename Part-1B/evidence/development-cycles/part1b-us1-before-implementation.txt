@@ -1,0 +1,16 @@
+
+=================================== ERRORS ====================================
+______________ ERROR collecting tests/unit/test_create_agent.py _______________
+ImportError while importing test module 'C:\Users\hp\Documents\Codex\2026-11-09\i-have-uploaded-two-important-files\outputs\Assignment-1\Part-1B\tests\unit\test_create_agent.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\hp\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\unit\test_create_agent.py:3: in <module>
+    from reminder_agent.agent import ReminderAgent
+E   ModuleNotFoundError: No module named 'reminder_agent.agent'
+=========================== short test summary info ===========================
+ERROR tests/unit/test_create_agent.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.42s

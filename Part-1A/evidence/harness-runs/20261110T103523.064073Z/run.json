@@ -1,0 +1,75 @@
+{
+  "run_id": "20261110T103523.064073Z",
+  "started_at_utc": "2026-11-10T10:35:23.064073Z",
+  "completed_at_utc": "2026-11-10T10:35:23.502620Z",
+  "gates": [
+    {
+      "name": "compileall",
+      "command": [
+        "C:\\Users\\hp\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "tests",
+        ".harness"
+      ],
+      "started_at_utc": "2026-11-10T10:35:23.075255Z",
+      "completed_at_utc": "2026-11-10T10:35:23.322445Z",
+      "exit_code": 0,
+      "status": "passed",
+      "stdout_file": "compileall.stdout.txt",
+      "stderr_file": "compileall.stderr.txt"
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "C:\\Users\\hp\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        ".harness"
+      ],
+      "started_at_utc": "2026-11-10T10:35:23.322445Z",
+      "completed_at_utc": "2026-11-10T10:35:23.382740Z",
+      "exit_code": 1,
+      "status": "failed",
+      "stdout_file": "ruff.stdout.txt",
+      "stderr_file": "ruff.stderr.txt"
+    },
+    {
+      "name": "bandit",
+      "command": [
+        "C:\\Users\\hp\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "bandit",
+        "-r",
+        "src"
+      ],
+      "started_at_utc": "2026-11-10T10:35:23.382740Z",
+      "completed_at_utc": "2026-11-10T10:35:23.436694Z",
+      "exit_code": 1,
+      "status": "failed",
+      "stdout_file": "bandit.stdout.txt",
+      "stderr_file": "bandit.stderr.txt"
+    },
+    {
+      "name": "pytest",
+      "command": [
+        "C:\\Users\\hp\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "started_at_utc": "2026-11-10T10:35:23.442589Z",
+      "completed_at_utc": "2026-11-10T10:35:23.501613Z",
+      "exit_code": 1,
+      "status": "failed",
+      "stdout_file": "pytest.stdout.txt",
+      "stderr_file": "pytest.stderr.txt"
+    }
+  ],
+  "overall_status": "failed"
+}

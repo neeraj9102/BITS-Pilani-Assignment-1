@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:assignment-1:reminder-agent:output-schema",
+  "title": "Reminder Agent Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["intent", "status", "reminder", "target_reminder_id", "missing_fields", "clarification_question", "reason_code"],
+  "properties": {
+    "intent": {"enum": ["create", "reschedule", "snooze", "clarify", "reject"]},
+    "status": {"enum": ["ready", "needs_clarification", "rejected"]},
+    "reminder": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "due_at", "timezone"],
+          "properties": {
+            "title": {"type": "string", "minLength": 1, "maxLength": 200},
+            "due_at": {"type": "string", "format": "date-time"},
+            "timezone": {"type": "string", "minLength": 1}
+          }
+        }
+      ]
+    },
+    "target_reminder_id": {"type": ["string", "null"]},
+    "missing_fields": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"enum": ["title", "date", "time", "timezone", "existing_reminder"]}
+    },
+    "clarification_question": {"type": ["string", "null"]},
+    "reason_code": {"type": ["string", "null"], "enum": ["malformed_input", "past_datetime", "unsupported_action", "unsafe_request", null]}
+  }
+}

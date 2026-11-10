@@ -1,0 +1,357 @@
+{
+  "snapshot": "final-generation",
+  "part": "Part-1B",
+  "created_at_utc": "2026-11-10T10:55:51.223481+00:00",
+  "files": [
+    {
+      "path": ".agents/skills/speckit-analyze/SKILL.md",
+      "sha256": "fad1c37a451e017995b15fc3eefe243274642fbb3ff7c8a5ab021908df71aa93",
+      "bytes": 12035
+    },
+    {
+      "path": ".agents/skills/speckit-checklist/SKILL.md",
+      "sha256": "5c1dce9333a2b733422e2dc75de7fc4d63ba91a460833d14ef3966a672328b9d",
+      "bytes": 22657
+    },
+    {
+      "path": ".agents/skills/speckit-clarify/SKILL.md",
+      "sha256": "1e9de2b2a673c923f7ca650fc40e4d5f24654163c577e0f1ceb70edfaa08114b",
+      "bytes": 19707
+    },
+    {
+      "path": ".agents/skills/speckit-constitution/SKILL.md",
+      "sha256": "ff6604c8424d4f4edf80f19ccfda1ede1a1dc5091a397cc1f0078a0bc3b0a538",
+      "bytes": 10520
+    },
+    {
+      "path": ".agents/skills/speckit-converge/SKILL.md",
+      "sha256": "369e168cbcc9f903d1b8f3f360a32d24a7ebf3d07066b8676032cffcafbebd9e",
+      "bytes": 13455
+    },
+    {
+      "path": ".agents/skills/speckit-implement/SKILL.md",
+      "sha256": "4d58a80ede8d837798d13a838b83a88fd4335104d0806d27f8018664a1ee0b85",
+      "bytes": 13083
+    },
+    {
+      "path": ".agents/skills/speckit-plan/SKILL.md",
+      "sha256": "0834b2298c078b0a89ee64a3e47e140cc9b31c4049492bd504491199a0fe3e73",
+      "bytes": 8239
+    },
+    {
+      "path": ".agents/skills/speckit-specify/SKILL.md",
+      "sha256": "37417c591b037e48507a622950f0b5b3596f65bfc0726eb544052dceedcaa92c",
+      "bytes": 19017
+    },
+    {
+      "path": ".agents/skills/speckit-tasks/SKILL.md",
+      "sha256": "1e1d18b34e39d62d6388297f035505905741b07973102e0d44aa8647d85ab093",
+      "bytes": 11582
+    },
+    {
+      "path": ".env.example",
+      "sha256": "58e2e7394b6f19ebc85badc88dae37144fbcb7658ee27384b29135a0f3021a94",
+      "bytes": 177
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "f9afdf0c02b37e93fcce0e858f36f922c7f1fa06154d1a80cb7ed1cc6c63402a",
+      "bytes": 146
+    },
+    {
+      "path": ".harness/evaluate.py",
+      "sha256": "79af2b30ba4cd1cb943ca722dd052735cd0c76f2a496aa629d0fc0822ee79af5",
+      "bytes": 23128
+    },
+    {
+      "path": ".harness/run_live.py",
+      "sha256": "62a48d04bab66ae36f430abd4f494947ec079644d1608a51f5d1bcdee2555480",
+      "bytes": 3152
+    },
+    {
+      "path": ".harness/run_offline.py",
+      "sha256": "6376c754814e65329f9b5d7686b0d3a93521571e38046c4ef62be529eee1db96",
+      "bytes": 3453
+    },
+    {
+      "path": ".specify/.gitignore",
+      "sha256": "0a61c5378b0bb2e0f85babff99c8b166f2170a2c12378cd17d929aa19296ec88",
+      "bytes": 586
+    },
+    {
+      "path": ".specify/feature.json",
+      "sha256": "bbef41677b944ad9246987e852cd2836ab7a7a23ab5c246b4d411b9840993457",
+      "bytes": 49
+    },
+    {
+      "path": ".specify/init-options.json",
+      "sha256": "0548798678e1bdb9957423a0025ded21f49dd73fce61a565e27b3e404387a496",
+      "bytes": 206
+    },
+    {
+      "path": ".specify/integration.json",
+      "sha256": "a472fa2305e32c83bf65b3af4892c9fee87c688c13670ad8f8956cf0381032ac",
+      "bytes": 286
+    },
+    {
+      "path": ".specify/integrations/codex.manifest.json",
+      "sha256": "c2887a5b98f6f3fa803716a0e3e001b9e6ed8827b83858f6d6de8c3106d19bf3",
+      "bytes": 1178
+    },
+    {
+      "path": ".specify/integrations/speckit.manifest.json",
+      "sha256": "3d53e7d878a51f43847faca0fedb90b4778a5d1756c9bdbe64b99aae231b5934",
+      "bytes": 1535
+    },
+    {
+      "path": ".specify/memory/.constitution-template.json",
+      "sha256": "8fc4b39294bae0c10d59547ad7d415b6f0e890d656cbf7171dd567f4e9054711",
+      "bytes": 103
+    },
+    {
+      "path": ".specify/memory/constitution.md",
+      "sha256": "6cdeb5a6af6501f85bd5d669a0e17a67177901ec2f8829251ff21a5ead241ed2",
+      "bytes": 4126
+    },
+    {
+      "path": ".specify/scripts/powershell/check-prerequisites.ps1",
+      "sha256": "f48e586b57cc049ea83ade5acecb466f861aee4fb444dab54bbafc813222da10",
+      "bytes": 7085
+    },
+    {
+      "path": ".specify/scripts/powershell/common.ps1",
+      "sha256": "54b59523b13fd8f884ff8b6b4e74fded922cdcc884965ff720392ca64ec1aa47",
+      "bytes": 35317
+    },
+    {
+      "path": ".specify/scripts/powershell/create-new-feature.ps1",
+      "sha256": "481c7368541a816b1679e5ed65fa9e5aea84b09f8be3a02ff8a340e3b48dd58a",
+      "bytes": 14876
+    },
+    {
+      "path": ".specify/scripts/powershell/resolve-template.ps1",
+      "sha256": "e49c565a09902e4ebd4b5a51c4e014d5067fdee5b1592f15cb44ef31f430d745",
+      "bytes": 889
+    },
+    {
+      "path": ".specify/scripts/powershell/setup-plan.ps1",
+      "sha256": "5939ef98418e8dc8cc722ef53ba359fc814f3d2a9fd7620f04e8d145a7041f1a",
+      "bytes": 3062
+    },
+    {
+      "path": ".specify/scripts/powershell/setup-tasks.ps1",
+      "sha256": "a1a5002280b3016e5f5b150719eb5442b8505abf325ef266139becde2c070d33",
+      "bytes": 3977
+    },
+    {
+      "path": ".specify/templates/checklist-template.md",
+      "sha256": "70bbc48e884fab372ffb09e83e78ff983e28b69caebf8cd9964a02b6836683ac",
+      "bytes": 2033
+    },
+    {
+      "path": ".specify/templates/constitution-template.md",
+      "sha256": "ce7549540fa45543cca797a150201d868e64495fdff39dc38246fb17bd4024b3",
+      "bytes": 2346
+    },
+    {
+      "path": ".specify/templates/plan-template.md",
+      "sha256": "a828ad6206526574ab3fc99be6d0154588cb1c9774c5919d71b81ab5b2dbffa0",
+      "bytes": 3682
+    },
+    {
+      "path": ".specify/templates/spec-template.md",
+      "sha256": "3945437fc35cd30a5b2bf7beea680337c3516826d3efa5a6b92c4a7eca1ba28e",
+      "bytes": 4556
+    },
+    {
+      "path": ".specify/templates/tasks-template.md",
+      "sha256": "b0f527d41e546af0c31903e04f9b20965b6b497b573792198f663a64ce128863",
+      "bytes": 9171
+    },
+    {
+      "path": ".specify/workflows/speckit/workflow.yml",
+      "sha256": "177761c5e7df28126beea043b5cb45aeaf7958090c022dc11ac71399422fcfbc",
+      "bytes": 2118
+    },
+    {
+      "path": ".specify/workflows/workflow-registry.json",
+      "sha256": "ef8887117b36601776b27f03dc8d166af8661b3898d0b725f55e1f7138770891",
+      "bytes": 381
+    },
+    {
+      "path": "evals/dataset.json",
+      "sha256": "65343d2d7495a7e72ed52704a056eb46a13167bf8625ce1f6d7c20fef67d9b61",
+      "bytes": 18895
+    },
+    {
+      "path": "prompts/system.md",
+      "sha256": "010d125e6e38c77ff2591f40501bd17589d9910e45d90b832689aefbf821f356",
+      "bytes": 2399
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "833fbf140e13c4e5ed0a0a0c838d6f66c62a0575f7d5cd94fdd6a73eb28ba2e3",
+      "bytes": 742
+    },
+    {
+      "path": "README.md",
+      "sha256": "f298a063687aa2cbefcee849b71b30aab721e520a9170c696497c62a315ab640",
+      "bytes": 1846
+    },
+    {
+      "path": "specs/001-reminder-agent/checklists/quality.md",
+      "sha256": "ee6211e100d65d6803b32ba4b26553f26b0c71d6653a51d38dc586d14322f71f",
+      "bytes": 2480
+    },
+    {
+      "path": "specs/001-reminder-agent/checklists/requirements.md",
+      "sha256": "b43385cb45dbeb1847a72dae7875136b33266bf97943dd713d968b00aef6d376",
+      "bytes": 1793
+    },
+    {
+      "path": "specs/001-reminder-agent/clarifications.md",
+      "sha256": "987a3110acdce412172c8ced2fda855c9afe5454dbb2eae50034ba71d9ab7c91",
+      "bytes": 2018
+    },
+    {
+      "path": "specs/001-reminder-agent/contracts/agent-cli.md",
+      "sha256": "a4a6ff8a4a7fe3078d789cd23342b5ce866a3742769e7d0548ef739c269771f7",
+      "bytes": 1160
+    },
+    {
+      "path": "specs/001-reminder-agent/contracts/evaluation-dataset.schema.json",
+      "sha256": "809a46fac57d96e7ca4fe5b49121e36ded6faee63927a9b721ee9989a2bbcd35",
+      "bytes": 4734
+    },
+    {
+      "path": "specs/001-reminder-agent/contracts/reminder-output.schema.json",
+      "sha256": "6b3f610be07b0fc702db567cbf51402c6e52bd39180bda9e51320986474996b6",
+      "bytes": 1392
+    },
+    {
+      "path": "specs/001-reminder-agent/data-model.md",
+      "sha256": "e8581f2b4e63443617d86a81b2bc0659976f14c8d6e63eacaffbccb496b11b38",
+      "bytes": 3040
+    },
+    {
+      "path": "specs/001-reminder-agent/plan.md",
+      "sha256": "a9db4d231455a290754f576088b9a737a45ea38982d28c608ef41bdfd1a8d9d2",
+      "bytes": 8898
+    },
+    {
+      "path": "specs/001-reminder-agent/quickstart.md",
+      "sha256": "746a3a4737977e3c1310cc5736465592a47c1e481da77508df17a13706c66c16",
+      "bytes": 1406
+    },
+    {
+      "path": "specs/001-reminder-agent/research.md",
+      "sha256": "1e111b431cf3c4273b8aef4143918035c394a6cf52da02651aa7c6cb01b7d551",
+      "bytes": 5694
+    },
+    {
+      "path": "specs/001-reminder-agent/spec.md",
+      "sha256": "b9204ce8d5306386a6f14b739000cd1aaa1b3345171645654bedd8c28d101e1c",
+      "bytes": 15401
+    },
+    {
+      "path": "specs/001-reminder-agent/tasks.md",
+      "sha256": "57c7d014cc3603e8c5b5108a7792cda1de698f7b8676b5bb5a71bab8079823bf",
+      "bytes": 12591
+    },
+    {
+      "path": "src/reminder_agent/__init__.py",
+      "sha256": "07ced28b59824e3156929cd391053f07b372dbc75e93b8b889b4e9144d39ae7e",
+      "bytes": 74
+    },
+    {
+      "path": "src/reminder_agent/__main__.py",
+      "sha256": "24b327c5be09037546c0306bc9de437a6194fe159d233f4a4dcc8cc9b5e42a9a",
+      "bytes": 149
+    },
+    {
+      "path": "src/reminder_agent/agent.py",
+      "sha256": "003543a3aa6b03ff6905d53e53e15e90f70324e72581424f44b42f5a2ded818e",
+      "bytes": 3185
+    },
+    {
+      "path": "src/reminder_agent/cli.py",
+      "sha256": "40a7db71fc5b69ab64f3256db9770846bc7d838882d6baa0ca24b3d2fabb1a0b",
+      "bytes": 679
+    },
+    {
+      "path": "src/reminder_agent/client.py",
+      "sha256": "6c1e504cc524069f3d7ea12e3d65751bafdef7d9660283ad7abf19056dc2c874",
+      "bytes": 421
+    },
+    {
+      "path": "src/reminder_agent/models.py",
+      "sha256": "66d432259f4c668d5497489643b3493bfd3c87559ad8d82559329348b84406a6",
+      "bytes": 2510
+    },
+    {
+      "path": "src/reminder_agent/openai_client.py",
+      "sha256": "60db23fc681f40b5e89d97910d006aeb1b2914f63023579cfa00c879c8984bef",
+      "bytes": 3706
+    },
+    {
+      "path": "src/reminder_agent/provider_schema.py",
+      "sha256": "878c8a9deb17557cb0feee9513e8588fa7f0835a31af4fa748084af9129718df",
+      "bytes": 2003
+    },
+    {
+      "path": "src/reminder_agent/validation.py",
+      "sha256": "666e30ba848a6c682eddaa641ce5fe49ad0cb0330fb13284b5b0c452044f72be",
+      "bytes": 9462
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "5eaa98e1a6cc887001526e1dc987a5b6e55fbc232f8959e3ac06a484a010f33b",
+      "bytes": 1273
+    },
+    {
+      "path": "tests/contract/test_dataset.py",
+      "sha256": "e3ceaffc8cd857566be71662a302314359eed8e29229e1c169777e09864dba0e",
+      "bytes": 1612
+    },
+    {
+      "path": "tests/contract/test_output_contract.py",
+      "sha256": "d1057cc758607d5f5b750a094ba94f41e0b461ca1fed35d5876cc8c2cca1f3bc",
+      "bytes": 2950
+    },
+    {
+      "path": "tests/unit/test_boundaries.py",
+      "sha256": "693d20939c58ee2b9734948e3fcbd672c70ff626b34d5faa7732d1a4018a0fe2",
+      "bytes": 2997
+    },
+    {
+      "path": "tests/unit/test_create_agent.py",
+      "sha256": "65a42302ba7a6cb775370ca358b8c4c6dc44aa439b2834fd1eb260988b877095",
+      "bytes": 2765
+    },
+    {
+      "path": "tests/unit/test_evaluation.py",
+      "sha256": "d13c5b62eb20551e4aeb3020bc95a5e1cef3f6f09d46964f5c11ff9c46546c62",
+      "bytes": 4014
+    },
+    {
+      "path": "tests/unit/test_guardrails.py",
+      "sha256": "bedc88b0648adde41095b18ff9c862ee9d4b6ffb1b2f980ff267ecf6b80ad3ff",
+      "bytes": 2078
+    },
+    {
+      "path": "tests/unit/test_openai_client.py",
+      "sha256": "91f36a4791d41b503b79ab1c76dd11a535adf8da09d92191e702cd48cbbf9a85",
+      "bytes": 3211
+    },
+    {
+      "path": "tests/unit/test_reschedule_agent.py",
+      "sha256": "30ea64659e7ef7896ca281bca90c33e3fd5aaf3c07fc714ba396119bb99bf4c1",
+      "bytes": 1530
+    },
+    {
+      "path": "tests/unit/test_snooze_agent.py",
+      "sha256": "608e313d1c44130dd4f48d3d675abc1221caa21ca44c82d55d655d1bb917e738",
+      "bytes": 2730
+    }
+  ]
+}
